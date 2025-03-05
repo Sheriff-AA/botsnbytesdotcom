@@ -1,3 +1,6 @@
+{% load i18n %}
+{% load static %}
+
 <!doctype html>
 <html lang="en" class="dark">
     <head>
@@ -7,7 +10,7 @@
         <meta name="description" content="Get all your AI models and tools in one place" />
         <link
             rel="shortcut icon"
-            href="./assets/logo/logo.png"
+            href="{% static 'assets/logo/logo.png' %}"
             type="image/x-icon"
         />
 
@@ -18,18 +21,6 @@
         <meta property="og:url" content="https://github.com/PaulleDemon" />
         <meta property="og:image" content="" />
 
-        <!-- <link rel="stylesheet" href="css/tailwind-runtime.css" /> -->
-        <link rel="stylesheet" href="css/tailwind-build.css">
-        <link rel="stylesheet" href="css/index.css" />
-
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
-            integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
-
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-"></script>
         <script>
@@ -39,24 +30,18 @@
 
             gtag('config', 'G-');
         </script>
+        {% include 'base/css.html' %}
         {% include 'base/navbar.html' %}
 
     </head>
-     <body class="min-h-[100vh] bg-gray-200 font-mono antialiased">
+
+    <body class="flex min-h-[100vh] flex-col bg-[#fcfcfc] text-black dark:bg-black  dark:text-white">
         {% block content %}
 
         {% endblock content %}
         {% include 'base/footer.html' %}
     </body>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js" integrity="sha512-B1lby8cGcAUU3GR+Fd809/ZxgHbfwJMp0jLTVfHiArTuUt++VqSlJpaJvhNtRf3NERaxDNmmxkdx2o+aHd4bvw==" crossorigin="anonymous"
-    referrerpolicy="no-referrer"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js" integrity="sha512-AY2+JxnBETJ0wcXnLPCcZJIJx0eimyhz3OJ55k2Jx4RtYC+XdIi2VtJQ+tP3BaTst4otlGG1TtPJ9fKrAUnRdQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js" integrity="sha512-hIlMpy2enepx9maXZF1gn0hsvPLerXoLHdb095CmRY5HG3bZfN7XPBZ14g+TUDH1aGgfLyPHmY9/zuU53smuMw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <script src="./scripts/components.js"></script>
-    <script src="./index.js"></script>
+        {% include 'base/js.html' %}
 
 </html>

@@ -3,1471 +3,1158 @@
 
 {% block content %}
 
-    <body class="flex min-h-[100vh] flex-col bg-[#fcfcfc] 
-            text-black dark:bg-black  dark:text-white">
-        <!-- <div class="absolute top-0 left-1/2 -translate-x-1/2 flex 
-                    h-[100px] w-full max-w-[80%]">
-            <div class="header-gradient h-full w-full "></div>
-        </div> -->
-
-        {% comment %} {% include 'base/navbar.html' %} {% endcomment %}
-
-        <section
-            class="hero-section relative mt-20 flex min-h-[100vh] w-full max-w-[100vw] flex-col overflow-hidden max-lg:mt-[100px]"
-            id="hero-section"
-        >
-
+    <section class="hero-section relative mt-20 flex min-h-[100vh] w-full max-w-[100vw] flex-col overflow-hidden max-lg:mt-[100px]" id="hero-section">
             <!-- video container -->
-            <div class="fixed bg-[#000000af] dark:bg-[#80808085] top-0 left-1/2 -translate-x-1/2 z-20 transition-opacity
-                duration-300 scale-0 opacity-0 p-2
-                w-full h-full flex place-content-center place-items-center" id="video-container-bg">
+        <div class="fixed bg-[#000000af] dark:bg-[#80808085] top-0 left-1/2 -translate-x-1/2 z-20 transition-opacity duration-300 scale-0 opacity-0 p-2 w-full h-full flex place-content-center place-items-center" id="video-container-bg">
 
-                <div class="max-w-[80vw] max-lg:max-w-full max-lg:w-full scale-0 transition-transform duration-500 p-6 rounded-xl  max-lg:px-2 w-full gap-2 shadow-md 
-                            h-[90vh] max-lg:h-auto max-lg:min-h-[400px] bg-white dark:bg-[#16171A] max-h-full
-                            " id="video-container">
-                    <div class="w-full flex">
-                        <button type="button" onclick="closeVideo()" class="ml-auto text-xl" title="close">
-                            <i class="bi bi-x-circle-fill"></i>
-                        </button>
-                    </div>
-                    <div class="flex w-full  rounded-xl px-[5%] max-md:px-2 min-h-[300px] max-h-[90%] h-full">
-
-                        <div class="relative bg-black min-w-full min-h-full overflow-clip rounded-md">
-                            <!-- add your youtube video link here -->
-                            <iframe class="absolute top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%] w-full h-full" 
-                                src="https://www.youtube.com/embed/6j4fPVkA3EA?si=llcTrXPRM-MRXDZB&amp;controls=0&rel=0&showinfo=0&autoplay=1&loop=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
-        
-                    </div>
-                </div>  
-            </div>
-
-            <div    
-                class="hero-bg-gradient relative flex h-full min-h-[100vh] w-full flex-col place-content-center gap-6 p-[5%] max-xl:place-items-center max-lg:p-4"
-            >
-
-                <div class="purple-bg-grad  reveal-up absolute left-1/2 -translate-1/2 top-[10%] h-[120px] w-[120px]"
-                ></div> 
-
-                <div
-                    class="flex flex-col min-h-[60vh] place-content-center items-center"
-                >
-                    <h2
-                        class="reveal-up text-center text-7xl font-semibold uppercase leading-[90px] max-lg:text-4xl max-md:leading-snug"
-                    >
-                        <span class=""> All your AI models </span>
-                        <br />
-                        <span class="font-thin font-serif"> in one place </span>
-                    </h2>
-                    <div
-                        class="reveal-up mt-8 max-w-[450px] text-lg max-lg:text-base p-2 text-center
-                         text-gray-800 dark:text-white max-lg:max-w-full"
-                    >
-                        <!-- Test, Develop and Deploy all your AI models in one place, with Pixa seamless playground interface -->
-                        Your all in one AI companion. generate Images, videos, codes, docs, debug your web apps all with Pixa's interface.
-                    </div>
-
-                    <div
-                        class="reveal-up mt-10 max-md:flex-col flex place-items-center gap-4"
-                    >
-
-                        <button onclick="openVideo()"
-                            class="btn !w-[170px] max-lg:!w-[160px] !rounded-xl !py-4 max-lg:!py-2 flex gap-2 group !bg-transparent !text-black dark:!text-white transition-colors 
-                                        duration-[0.3s] border-[1px] border-black dark:border-white"
-                        >
-                            
-                            <div class="relative flex place-items-center place-content-center w-6 h-6">
-                                <div class="absolute inset-0 top-0 left-0 scale-0 duration-300 group-hover:scale-100 border-2
-                                             border-gray-600 dark:border-gray-200 rounded-full w-full h-full"></div>
-                                <span class="bi bi-play-circle-fill"></span>
-                            </div>
-                            <span>Watch video</span>
-                        </button>
-
-                        <a
-                            class="btn group max-lg:!w-[160px] flex gap-2 shadow-lg !w-[170px] !rounded-xl !py-4 max-lg:!py-2 transition-transform duration-[0.3s] hover:scale-x-[1.03]"
-                            href="#"
-                        >
-                            <span>Get started</span>
-                            <i class="bi bi-arrow-right group-hover:translate-x-1 duration-300"></i>
-                        </a>
-                        
-                    </div>
+            <div class="max-w-[80vw] max-lg:max-w-full max-lg:w-full scale-0 transition-transform duration-500 p-6 rounded-xl  max-lg:px-2 w-full gap-2 shadow-md 
+                        h-[90vh] max-lg:h-auto max-lg:min-h-[400px] bg-white dark:bg-[#16171A] max-h-full
+                        " id="video-container">
+                <div class="w-full flex">
+                    <button type="button" onclick="closeVideo()" class="ml-auto text-xl" title="close">
+                        <i class="bi bi-x-circle-fill"></i>
+                    </button>
                 </div>
-                
-                <!-- prompt container -->
-                <div
-                    class="reveal-up  relative mt-8 flex w-full place-content-center place-items-center"
-                    id="dashboard-container"
-                >
-                    <div class="purple-bg-grad  reveal-up absolute left-1/2 -translate-x-1/2 top-[5%] h-[200px] w-[200px]"
-                    ></div>    
+                <div class="flex w-full  rounded-xl px-[5%] max-md:px-2 min-h-[300px] max-h-[90%] h-full">
 
-                    <div
-                        class="relative max-w-[80%] bg-white dark:bg-black border-[1px] dark:border-[#36393c] lg:w-[1024px]
-                                lg:h-[650px]  flex shadow-xl max-lg:h-[450px] max-lg:w-full
-                                overflow-hidden
-                                min-w-[320px] md:w-full min-h-[450px] rounded-xl bg-transparent max-md:max-w-full"
-                        id="dashboard"
-                    >  
-
-                        <div class="purple-bg-grad max-w-[80%] reveal-up absolute left-1/2 -translate-x-1/2 top-[0%] lg:max-w-[1000px] h-full w-full"
-                        ></div> 
-                        <div class="animated-border w-full h-full p-[2px]">
-                            <div class="w-full h-full rounded-xl overflow-hidden flex">
-                                <!-- sign-up pop-up -->
-                                <div class="absolute rounded-xl text-center transition-transform duration-300 scale-0 backdrop-blur-lg flex flex-col p-10 place-items-center 
-                                        gap-4 w-full h-full dark:bg-[#000000b4] bg-[#ffffff6a] firefox:bg-white top-0 left-0 z-20"
-                                        id="signup-prompt"
-                                        >
-
-                                    <h4 class="mt-6 text-3xl max-md:text-xl">
-                                        Signup to continue your conversation
-                                    </h4>
-
-                                    <div class="flex gap-1 place-items-center">
-                                        <div class="flex -space-x-4">
-                                            <img class="z-10 w-10 h-10 object-cover rounded-full border-2 border-white" src="assets/images/people/man.jpg" alt="Avatar 1">
-                                            <img class="z-[4] w-10 h-10 object-cover rounded-full border-2 border-white" src="assets/images/people/women.jpg" alt="Avatar 2">
-                                            <img class="z-[3] w-10 h-10 object-cover rounded-full border-2 border-white" src="assets/images/people/man2.jpg" alt="Avatar 3">
-                                            <img class="z-[2] w-10 h-10 object-cover rounded-full border-2 border-white" src="assets/images/people/man.jpg" alt="Avatar 4">
-                                            <img class="z-[1] w-10 h-10 object-cover rounded-full border-2 border-white" src="assets/images/people/women.jpg" alt="Avatar 5">
-                                        </div>
-                                        <p>+20,000</p>
-                                    </div>
-
-                                    <div class="mt-3 text-lg">
-                                        Join Ben and 20,000+ users using Pixa
-                                    </div>
-
-                                    <a href="#" class="btn">
-                                        Sign up
-                                    </a>
-
-                                </div>
-
-                                <div class="min-w-[250px] max-lg:hidden p-2 gap-2 flex flex-col bg-gray-100 
-                                            dark:bg-[#171717] h-full">
-                                    <!-- <h3 class="text-xl uppercase">
-                                        Pixa
-                                    </h3> -->
-                                    <div class="h-[30px] w-fit max-w-[100px]">
-                                        <img
-                                            src="./assets/logo/logo.png"
-                                            alt="logo"
-                                            class="object-contain opacity-80 h-full w-full dark:invert"
-                                        />
-                                    </div>
-
-                                    <div class="flex mt-2 gap-2 flex-col">
-                                        <a href="#link-to-img-gen" 
-                                            class="flex rounded-sm gap-2 p-2 dark:hover:bg-[#2d2d2ddb] hover:bg-gray-200">
-                                            <i class="bi bi-image"></i>
-                                            <span>Image generator</span>
-                                        </a>
-                                        <a href="#link-to-pdf-gen" 
-                                            class="flex rounded-sm gap-2 p-2 dark:hover:bg-[#2d2d2ddb] hover:bg-gray-200">
-                                            <i class="bi bi-file-pdf"></i>
-                                            <span>Pdf generator</span>
-                                        </a>
-                                        <a href="#link-to-code-gen" 
-                                            class="flex rounded-sm gap-2 p-2 dark:hover:bg-[#2d2d2ddb] hover:bg-gray-200">
-                                            <i class="bi bi-code-square"></i>
-                                            <span>Code generator</span>
-                                        </a>
-                                        <a href="#" 
-                                            class="flex rounded-sm group gap-2 p-2 dark:hover:bg-[#2d2d2ddb] hover:bg-gray-200">
-                                            <span>Show all</span>
-                                            <i class="bi bi-arrow-right transform transition-transform duration-300 group-hover:translate-x-1"></i>
-                                        </a>
-                                    </div>
-
-                                    <div class="mt-auto w-full flex px-6 place-content-center">
-                                        <a href="#sign-up" class="btn !w-full !bg-transparent duration-[0.3s] 
-                                                                hover:!bg-black hover:!text-white
-                                                                dark:hover:!bg-white dark:hover:!text-black
-                                                                !border-[1px] !border-black !text-black
-                                                                dark:!border-white dark:!text-white
-                                                                ">
-                                            Signup
-                                        </a>
-                                    </div>
-
-                                </div>
-
-                                <div class="flex w-full p-4 bg-white dark:bg-black h-full flex-col" id="pixa-playground">
-                                    <div class="relative w-full flex place-content-center h-full">
-                                        <div class="absolute top-[20%] max-lg:top-[30%] left-1/2 -translate-x-1/2  w-[150px] h-[150px]">
-                                            <img src="./assets/logo/logo.png" class="w-full h-full dark:invert object-contain opacity-20"
-                                                alt="Pixa logo">
-                                        </div>
-                                        <div class="prompt-container overflow-y-auto px-[5%] max-lg:px-2 scrollbar max-lg:max-h-[80%] max-h-[550px] 
-                                                    max-lg:mt-12 w-full h-full z-10 flex flex-col" id="prompt-container">
-                                            <div class="w-full flex text-center flex-col place-content-center">
-                                                <h2 class="text-4xl max-md:text-2xl max-md:mt-3 opacity-80">
-                                                    Try Prompts
-                                                </h2>
-                                                <div class="inline mt-6 max-md:mt-3">
-                                                    <span id="prompts-sample" ></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-
-                                    <form action="" id="prompt-form" onsubmit="return false;" 
-                                        class="place-content-center mt-auto h-[50px] p-1 place-items-center 
-                                                justify-around flex gap-1 bottom-2 w-full rounded-md bg-[#f3f4f6] dark:bg-[#171717]">
-                                        <div class="min-w-[140px] min-h-[80px] max-lg:absolute z-10 top-1 left-1/2 max-lg:-translate-x-1/2 
-                                                    flex flex-col text-sm gap-1 place-content-center">
-                                            <div class="dropdown p-2 rounded-md  bg-[#f3f4f6] dark:bg-[#171717]" id="dropdown1">
-                                                <!-- store the value of the dropdown-->
-                                                <input type="hidden" class="dropdown-input">
-                                                <button
-                                                    type="button"
-                                                    class="dropdown-toggle flex gap-5"
-                                                >
-                                                    <span class="flex w-fit gap-2 place-items-center">
-                                                        <div class="w-[20px] h-[20px]">
-                                                            <img src="./assets/images/brand-logos/openai.svg" 
-                                                                alt="Gpt3.5" class="dropdown-select-icon dark:invert">
-                                                        </div>
-                                                        <span class="dropdown-select-text">GPT 4o</span>
-                                                    </span>
-                                                    <i class="bi bi-chevron-down ml-auto lg:hidden"
-                                                        ></i>
-                                                    <i class="bi bi-chevron-up ml-auto lg:block hidden"
-                                                        ></i>
-                                                </button>
-                                                <ul class="dropdown-menu shadow-md bottom-[50px] max-lg:top-[105%] max-lg:bottom-[unset]">
-                                                    <li class="flex gap-2 place-items-center">
-                                                        <div class="w-[20px] h-[20px]">
-                                                            <img src="./assets/images/brand-logos/openai.svg" alt="Gpt-4o" 
-                                                                    class="dropdown-menu-icon dark:invert">
-                                                        </div>
-                                                        <span class="dropdown-text">GPT 4o</span>
-                                                    </li>
-                                                    
-                                                    <li class="flex gap-2 place-items-center">
-                                                        <div class="w-[20px] h-[20px]">
-                                                            <img src="./assets/images/brand-logos/googlegemini.svg" alt="Gemini" 
-                                                            class="dropdown-menu-icon dark:invert">
-                                                        </div>
-                                                        <span class="dropdown-text">Gemini</span>
-                                                    </li>
-                                                    <li class="flex gap-2 place-items-center">
-                                                        <div class="w-[20px] h-[20px]">
-                                                            <img src="./assets/images/brand-logos/meta.svg" alt="Llama" 
-                                                                    class="dropdown-menu-icon dark:invert">
-                                                        </div>
-                                                        <span class="dropdown-text">Llama 3</span>
-                                                    </li>
-                                                    <li class="flex gap-2 place-items-center">
-                                                        <div class="w-[20px] h-[20px]">
-                                                            <img src="./assets/images/brand-logos/claude.svg" alt="Perplexity" 
-                                                                class="dropdown-menu-icon dark:invert">
-                                                        </div>
-                                                        <span class="dropdown-text">Claude</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <input placeholder="How to develop a saas app?" 
-                                                type="text" class="p-2 !outline-none bg-transparent border-none w-full placehoder-gray-500
-                                                                    dark:placeholder-opacity-60 dark:placeholder-gray-300 max-w-[80%] h-full" 
-                                                name="prompt" >
-                                        <button type="submit" class="btn !bg-[#6366f1] !p-2 !px-3 !text-white" title="submit">
-                                            <i class="bi bi-arrow-up"></i>
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="relative bg-black min-w-full min-h-full overflow-clip rounded-md">
+                        <!-- add your youtube video link here -->
+                        <iframe class="absolute top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%] w-full h-full" 
+                            src="https://www.youtube.com/embed/6j4fPVkA3EA?si=llcTrXPRM-MRXDZB&amp;controls=0&rel=0&showinfo=0&autoplay=1&loop=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
-
+    
                 </div>
-            </div>
-        </section>
+            </div>  
+        </div>
 
-        <section
-            class="relative flex w-full max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden p-8"
-        >
-            <h2 class="reveal-up text-3xl max-md:text-xl">
-                Trusted by brands you love
-            </h2>
+        <div class="hero-bg-gradient relative flex h-full min-h-[100vh] w-full flex-col place-content-center gap-6 p-[5%] max-xl:place-items-center max-lg:p-4">
 
-            <div class="reveal-up carousel-container">
-                <div
-                    class="carousel lg:w-place-content-center mt-10 flex w-full gap-5 max-md:gap-2"
-                >
-                    <!-- add the brands using your app  -->
-                    <div class="carousel-img h-[30px] w-[150px]">
-                        <img
-                            src="./assets/images/brand-logos/google.svg"
-                            alt="Google"
-                            class="h-full w-full object-contain grayscale transition-colors hover:grayscale-0"
-                            srcset=""
-                        />
-                    </div>
-                    <div class="carousel-img h-[30px] w-[150px]">
-                        <img
-                            src="./assets/images/brand-logos/microsoft.svg"
-                            alt="Microsoft"
-                            class="h-full w-full object-contain grayscale transition-colors hover:grayscale-0"
-                            srcset=""
-                        />
-                    </div>
-                    <div class="carousel-img h-[30px] w-[150px]">
-                        <img
-                            src="./assets/images/brand-logos/adobe.svg"
-                            alt="Adobe"
-                            class="h-full w-full object-contain grayscale transition-colors hover:grayscale-0"
-                            srcset=""
-                        />
-                    </div>
-                    <div class="carousel-img h-[30px] w-[150px]">
-                        <img
-                            src="./assets/images/brand-logos/airbnb.svg"
-                            alt="Airbnb"
-                            class="h-full w-full object-contain grayscale transition-colors hover:grayscale-0"
-                            srcset=""
-                        />
-                    </div>
-                    <div class="carousel-img h-[30px] w-[150px]">
-                        <img
-                            src="./assets/images/brand-logos/stripe.svg"
-                            alt="Stripe"
-                            class="h-full w-full object-contain grayscale transition-colors hover:grayscale-0"
-                            srcset=""
-                        />
-                    </div>
-                    <div class="carousel-img h-[30px] w-[150px]">
-                        <img
-                            src="./assets/images/brand-logos/reddit.svg"
-                            alt="Reddit"
-                            class="h-full w-full object-contain grayscale transition-colors hover:grayscale-0"
-                            srcset=""
-                        />
-                    </div>
-                </div>
-            </div>
-        </section>
+            <div class="purple-bg-grad reveal-up absolute left-1/2 -translate-1/2 top-[10%] h-[120px] w-[120px]"
+            ></div> 
 
-            
-        <section
-            class="relative flex  w-full min-h-[100vh] max-lg:min-h-[80vh] flex-col place-content-center place-items-center overflow-hidden"
-        >   
-             <div class="w-full  place-content-center items-center 
-                        flex flex-col max-w-[900px] gap-4 p-4">
-               <div class="purple-bg-grad  reveal-up absolute right-[20%] top-[20%] h-[200px] w-[200px]"
-                ></div>
-                <h2 class="reveal-up text-6xl max-lg:text-4xl text-center leading-normal uppercase">
-                    
-                    <span class="font-semibold">Build your own AI Apps </span>
-                    <br>
-                    <span class="font-serif">on top of Pixa APIs</span>
+            <div class="flex flex-col min-h-[60vh] place-content-center items-center">
+                <h2 class="reveal-up text-center text-7xl font-semibold uppercase leading-[90px] max-lg:text-4xl max-md:leading-snug">
+                    <span class=""> All your AI models </span>
+                    <br />
+                    <span class="font-thin font-serif"> in one place </span>
                 </h2>
-                <p class="reveal-up mt-8 max-w-[650px] text-gray-900 dark:text-gray-200 text-center max-md:text-sm">   
-                    Pixa's Playground is powered by Pixa's cutting-edge LLM API endpoints. Our powerful models simplify task automation, offering 
-                    advanced capabilities in summarization, text generation, and Q&A handling. 
-                </p>
-                <div class="reveal-up flex mt-8">
-                    <a href="#" 
-                        target="_blank"
-                        rel="noopener"
-                        class="shadow-md hover:shadow-xl dark:shadow-gray-800 transition-all duration-300 
-                                        border-[1px] p-3 px-4 border-black dark:border-white rounded-md">
-                        Check Pixa APIs
+                <div
+                    class="reveal-up mt-8 max-w-[450px] text-lg max-lg:text-base p-2 text-center
+                        text-gray-800 dark:text-white max-lg:max-w-full"
+                >
+                    <!-- Test, Develop and Deploy all your AI models in one place, with Pixa seamless playground interface -->
+                    Your all in one AI companion. generate Images, videos, codes, docs, debug your web apps all with Pixa's interface.
+                </div>
+
+                <div class="reveal-up mt-10 max-md:flex-col flex place-items-center gap-4">
+
+                    <button onclick="openVideo()"
+                        class="btn !w-[170px] max-lg:!w-[160px] !rounded-xl !py-4 max-lg:!py-2 flex gap-2 group !bg-transparent !text-black dark:!text-white transition-colors duration-[0.3s] border-[1px] border-black dark:border-white">
+                        
+                        <div class="relative flex place-items-center place-content-center w-6 h-6">
+                            <div class="absolute inset-0 top-0 left-0 scale-0 duration-300 group-hover:scale-100 border-2
+                                            border-gray-600 dark:border-gray-200 rounded-full w-full h-full"></div>
+                            <span class="bi bi-play-circle-fill"></span>
+                        </div>
+                        <span>Watch video</span>
+                    </button>
+
+                    <a
+                        class="btn group max-lg:!w-[160px] flex gap-2 shadow-lg !w-[170px] !rounded-xl !py-4 max-lg:!py-2 transition-transform duration-[0.3s] hover:scale-x-[1.03]"
+                        href="#"
+                    >
+                        <span>Get started</span>
+                        <i class="bi bi-arrow-right group-hover:translate-x-1 duration-300"></i>
                     </a>
+                    
                 </div>
             </div>
-        </section>
+            
+            <!-- prompt container -->
+            <div class="reveal-up relative mt-8 flex w-full place-content-center place-items-center" id="dashboard-container">
+                <div class="purple-bg-grad reveal-up absolute left-1/2 -translate-x-1/2 top-[5%] h-[200px] w-[200px]"></div>    
 
-        <section
-            class="relative flex max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden"
-        >   
+                <div class="relative max-w-[80%] bg-white dark:bg-black border-[1px] dark:border-[#36393c] lg:w-[1024px] lg:h-[650px]  flex shadow-xl max-lg:h-[450px] max-lg:w-full overflow-hidden min-w-[320px] md:w-full min-h-[450px] rounded-xl bg-transparent max-md:max-w-full" id="dashboard">
+                    <div class="purple-bg-grad max-w-[80%] reveal-up absolute left-1/2 -translate-x-1/2 top-[0%] lg:max-w-[1000px] h-full w-full"></div> 
+                    <div class="animated-border w-full h-full p-[2px]">
+                        <div class="w-full h-full rounded-xl overflow-hidden flex">
+                            <!-- sign-up pop-up -->
+                            <div class="absolute rounded-xl text-center transition-transform duration-300 scale-0 backdrop-blur-lg flex flex-col p-10 place-items-center gap-4 w-full h-full dark:bg-[#000000b4] bg-[#ffffff6a] firefox:bg-white top-0 left-0 z-20" id="signup-prompt">
 
+                                <h4 class="mt-6 text-3xl max-md:text-xl">
+                                    Signup to continue your conversation
+                                </h4>
 
-            <div
-                class="mt-8 flex flex-col w-full h-full place-items-center gap-5"
-            >
-                <div
-                    class="reveal-up mt-5 flex flex-col gap-3 text-center"
-                >
-                    <h2
-                        class="text-6xl font-medium max-md:text-3xl p-2"
-                    >
-                        Experience all the benefits of AI
-                    </h2>
-                </div>
-                <div
-                    class="mt-6 flex flex-col max-w-[1150px] max-lg:max-w-full h-full 
-                            p-4 max-lg:place-content-center gap-8 "
-                >   
+                                <div class="flex gap-1 place-items-center">
+                                    <div class="flex -space-x-4">
+                                        <img class="z-10 w-10 h-10 object-cover rounded-full border-2 border-white" src="{% static 'assets/images/people/man.jpg' %}" alt="Avatar 1">
+                                        <img class="z-[4] w-10 h-10 object-cover rounded-full border-2 border-white" src="{% static 'assets/images/people/women.jpg' %}" alt="Avatar 2">
+                                        <img class="z-[3] w-10 h-10 object-cover rounded-full border-2 border-white" src="{% static 'assets/images/people/man2.jpg' %}" alt="Avatar 3">
+                                        <img class="z-[2] w-10 h-10 object-cover rounded-full border-2 border-white" src="{% static 'assets/images/people/man.jpg' %}" alt="Avatar 4">
+                                        <img class="z-[1] w-10 h-10 object-cover rounded-full border-2 border-white" src="{% static 'assets/images/people/women.jpg' %}" alt="Avatar 5">
+                                    </div>
+                                    <p>+20,000</p>
+                                </div>
 
-                    <div class="max-xl:flex max-xl:flex-col place-items-center grid grid-cols-3 gap-8 
-                                place-content-center auto-rows-auto">
-                        <div class="reveal-up w-[350px] h-[540px] flex max-md:w-full">
-                            <a href="#" class=" relative p-10 transition-all duration-300 group/card  gap-5 flex 
-                                flex-col w-full h-full  bg-[#f6f7fb] dark:bg-[#171717] rounded-3xl 
-                                hover:scale-[1.02]">
-                                <div class="overflow-hidden w-full min-h-[180px] h-[180px]">
-                                    <img src="./assets/images/home/api.png" class="w-full object-contain h-auto" 
-                                        alt="unified interface">
-                                    <!-- <i class="bi bi-grid-1x2-fill"></i> -->
+                                <div class="mt-3 text-lg">
+                                    Join Ben and 20,000+ users using Pixa
                                 </div>
-                                <h2 class="text-3xl max-md:text-2xl font-medium">Unified interface</h2>
-                                <p class="text-base leading-normal text-gray-800 dark:text-gray-200">
-                                    Our's is the only unified AI Interface tool brings together all your favorite chat models into one seamless platform. No more juggling between different AI systems—easily manage and interact with multiple chatbots from a single interface.
-                                </p>
-                                <div class="flex items-center gap-2 mt-auto">
-                                    <span>Learn more</span>
-                                    <i class="bi bi-arrow-right transform transition-transform duration-300 group-hover/card:translate-x-2"></i>
-                                </div>
-                            </a>
-                        </div>
 
-                        
-                        <div class="reveal-up w-[350px] h-[540px] flex max-md:w-full">
-                            <a href="#" class=" relative p-10 transition-all duration-300 group/card  gap-5 flex 
-                                flex-col w-full h-full  bg-[#f6f7fb] dark:bg-[#171717] rounded-3xl 
-                                hover:scale-[1.02]">
-                                <div class="w-full min-h-[180px] h-[180px] overflow-hidden">
-                                    <img src="./assets/images/home/api.png" 
-                                        alt="API" class="w-full h-auto object-contain">
-                                    <!-- <i class="bi bi-grid-1x2-fill"></i> -->
-                                </div>
-                                <h2 class="text-3xl max-md:text-2xl font-medium">API Access</h2>
-                                <p class="leading-normal text-gray-800 dark:text-gray-200">
-                                    Pixa's LLM API offers advanced summarization, text generation, and question-answering. Easily integrate with support for JSON, HTML, Markdown, and plain text, enhancing your applications with powerful language tools.
-                                </p>
-                                <div class="flex items-center gap-2 mt-auto">
-                                    <span>Learn more</span>
-                                    <i class="bi bi-arrow-right transform transition-transform duration-300 group-hover/card:translate-x-2"></i>
-                                </div>
-                            </a>
-                        </div>
+                                <a href="#" class="btn">
+                                    Sign up
+                                </a>
 
-                        
-                        <div class="reveal-up w-[350px] h-[540px] flex max-md:w-full">
-                            <a href="#" class=" relative p-10 transition-all duration-300 group/card  gap-5 flex 
-                                flex-col w-full h-full  bg-[#f6f7fb] dark:bg-[#171717] rounded-3xl 
-                                hover:scale-[1.02]">
-                                <div class="w-full flex place-contet-center min-h-[180px] h-[180px] rounded-xl overflow-hidden">
-                                    <img src="./assets/images/home/integrations1.png" class="w-full h-auto object-contain" 
-                                            alt="Prebuilt integrations">
+                            </div>
+
+                            <div class="min-w-[250px] max-lg:hidden p-2 gap-2 flex flex-col bg-gray-100 dark:bg-[#171717] h-full">
+                                <!-- <h3 class="text-xl uppercase">
+                                    Pixa
+                                </h3> -->
+                                <div class="h-[30px] w-fit max-w-[100px]">
+                                    <img
+                                        src="{% static 'assets/logo/logo.png' %}"
+                                        alt="logo"
+                                        class="object-contain opacity-80 h-full w-full dark:invert"
+                                    />
                                 </div>
-                                <h2 class="text-3xl max-md:text-2xl font-medium">Pre-built Tools</h2>
-                                <p class="leading-normal text-gray-800 dark:text-gray-200">
-                                    Pixa offers pre-built AI integrations for diverse creative tasks including image, video, music, and PDF generation, simplifying advanced feature integration into your apps.
-                                </p>
-                                <div class="flex items-center gap-2 mt-auto">
-                                    <span>Learn more</span>
-                                    <i class="bi bi-arrow-right transform transition-transform duration-300 group-hover/card:translate-x-2"></i>
+
+                                <div class="flex mt-2 gap-2 flex-col">
+                                    <a href="#link-to-img-gen" 
+                                        class="flex rounded-sm gap-2 p-2 dark:hover:bg-[#2d2d2ddb] hover:bg-gray-200">
+                                        <i class="bi bi-image"></i>
+                                        <span>Image generator</span>
+                                    </a>
+                                    <a href="#link-to-pdf-gen" 
+                                        class="flex rounded-sm gap-2 p-2 dark:hover:bg-[#2d2d2ddb] hover:bg-gray-200">
+                                        <i class="bi bi-file-pdf"></i>
+                                        <span>Pdf generator</span>
+                                    </a>
+                                    <a href="#link-to-code-gen" 
+                                        class="flex rounded-sm gap-2 p-2 dark:hover:bg-[#2d2d2ddb] hover:bg-gray-200">
+                                        <i class="bi bi-code-square"></i>
+                                        <span>Code generator</span>
+                                    </a>
+                                    <a href="#" 
+                                        class="flex rounded-sm group gap-2 p-2 dark:hover:bg-[#2d2d2ddb] hover:bg-gray-200">
+                                        <span>Show all</span>
+                                        <i class="bi bi-arrow-right transform transition-transform duration-300 group-hover:translate-x-1"></i>
+                                    </a>
                                 </div>
-                            </a>
+
+                                <div class="mt-auto w-full flex px-6 place-content-center">
+                                    <a href="#sign-up" class="btn !w-full !bg-transparent duration-[0.3s] hover:!bg-black hover:!text-white dark:hover:!bg-white dark:hover:!text-black !border-[1px] !border-black !text-black dark:!border-white dark:!text-white">
+                                        Signup
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <div class="flex w-full p-4 bg-white dark:bg-black h-full flex-col" id="pixa-playground">
+                                <div class="relative w-full flex place-content-center h-full">
+                                    <div class="absolute top-[20%] max-lg:top-[30%] left-1/2 -translate-x-1/2  w-[150px] h-[150px]">
+                                        <img src="{% static 'assets/logo/logo.png' %}" class="w-full h-full dark:invert object-contain opacity-20" alt="Pixa logo">
+                                    </div>
+                                    <div class="prompt-container overflow-y-auto px-[5%] max-lg:px-2 scrollbar max-lg:max-h-[80%] max-h-[550px] max-lg:mt-12 w-full h-full z-10 flex flex-col" id="prompt-container">
+                                        <div class="w-full flex text-center flex-col place-content-center">
+                                            <h2 class="text-4xl max-md:text-2xl max-md:mt-3 opacity-80">
+                                                Try Prompts
+                                            </h2>
+                                            <div class="inline mt-6 max-md:mt-3">
+                                                <span id="prompts-sample" ></span>
+                                            </div>
+                                        </div>
+                                    </div>   
+                                </div>
+
+                                <form action="" id="prompt-form" onsubmit="return false;"  class="place-content-center mt-auto h-[50px] p-1 place-items-center justify-around flex gap-1 bottom-2 w-full rounded-md bg-[#f3f4f6] dark:bg-[#171717]">
+                                    <div class="min-w-[140px] min-h-[80px] max-lg:absolute z-10 top-1 left-1/2 max-lg:-translate-x-1/2 flex flex-col text-sm gap-1 place-content-center">
+                                        <div class="dropdown p-2 rounded-md  bg-[#f3f4f6] dark:bg-[#171717]" id="dropdown1">
+                                            <!-- store the value of the dropdown-->
+                                            <input type="hidden" class="dropdown-input">
+                                            <button type="button" class="dropdown-toggle flex gap-5">
+                                                <span class="flex w-fit gap-2 place-items-center">
+                                                    <div class="w-[20px] h-[20px]">
+                                                        <img src="{% static 'assets/images/brand-logos/openai.svg' %}" 
+                                                            alt="Gpt3.5" class="dropdown-select-icon dark:invert">
+                                                    </div>
+                                                    <span class="dropdown-select-text">GPT 4o</span>
+                                                </span>
+                                                <i class="bi bi-chevron-down ml-auto lg:hidden"
+                                                    ></i>
+                                                <i class="bi bi-chevron-up ml-auto lg:block hidden"
+                                                    ></i>
+                                            </button>
+                                            <ul class="dropdown-menu shadow-md bottom-[50px] max-lg:top-[105%] max-lg:bottom-[unset]">
+                                                <li class="flex gap-2 place-items-center">
+                                                    <div class="w-[20px] h-[20px]">
+                                                        <img src="{% static 'assets/images/brand-logos/openai.svg' %}" alt="Gpt-4o" class="dropdown-menu-icon dark:invert">
+                                                    </div>
+                                                    <span class="dropdown-text">GPT 4o</span>
+                                                </li>
+                                                
+                                                <li class="flex gap-2 place-items-center">
+                                                    <div class="w-[20px] h-[20px]">
+                                                        <img src="{% static 'assets/images/brand-logos/googlegemini.svg' %}" alt="Gemini" 
+                                                        class="dropdown-menu-icon dark:invert">
+                                                    </div>
+                                                    <span class="dropdown-text">Gemini</span>
+                                                </li>
+                                                <li class="flex gap-2 place-items-center">
+                                                    <div class="w-[20px] h-[20px]">
+                                                        <img src="{% static 'assets/images/brand-logos/meta.svg'%}" alt="Llama"  class="dropdown-menu-icon dark:invert">
+                                                    </div>
+                                                    <span class="dropdown-text">Llama 3</span>
+                                                </li>
+                                                <li class="flex gap-2 place-items-center">
+                                                    <div class="w-[20px] h-[20px]">
+                                                        <img src="{% static 'assets/images/brand-logos/claude.svg' %}" alt="Perplexity" 
+                                                            class="dropdown-menu-icon dark:invert">
+                                                    </div>
+                                                    <span class="dropdown-text">Claude</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <input placeholder="How to develop a saas app?" type="text" class="p-2 !outline-none bg-transparent border-none w-full placehoder-gray-500 dark:placeholder-opacity-60 dark:placeholder-gray-300 max-w-[80%] h-full" name="prompt" >
+                                    <button type="submit" class="btn !bg-[#6366f1] !p-2 !px-3 !text-white" title="submit">
+                                        <i class="bi bi-arrow-up"></i>
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="reveal-up w-full md:h-[350px] max-md:min-h-[350px] flex">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative flex w-full max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden p-8">
+        <h2 class="reveal-up text-3xl max-md:text-xl">
+            Trusted by brands you love
+        </h2>
+
+        <div class="reveal-up carousel-container">
+            <div class="carousel lg:w-place-content-center mt-10 flex w-full gap-5 max-md:gap-2">
+                <!-- add the brands using your app  -->
+                <div class="carousel-img h-[30px] w-[150px]">
+                    <img
+                        src="{% static 'assets/images/brand-logos/google.svg' %}"
+                        alt="Google"
+                        class="h-full w-full object-contain grayscale transition-colors hover:grayscale-0"
+                        srcset=""
+                    />
+                </div>
+                <div class="carousel-img h-[30px] w-[150px]">
+                    <img
+                        src="{% static 'assets/images/brand-logos/microsoft.svg' %}"
+                        alt="Microsoft"
+                        class="h-full w-full object-contain grayscale transition-colors hover:grayscale-0"
+                        srcset=""
+                    />
+                </div>
+                <div class="carousel-img h-[30px] w-[150px]">
+                    <img
+                        src="{% static 'assets/images/brand-logos/adobe.svg' %}"
+                        alt="Adobe"
+                        class="h-full w-full object-contain grayscale transition-colors hover:grayscale-0"
+                        srcset=""
+                    />
+                </div>
+                <div class="carousel-img h-[30px] w-[150px]">
+                    <img
+                        src="{% static 'assets/images/brand-logos/airbnb.svg' %}"
+                        alt="Airbnb"
+                        class="h-full w-full object-contain grayscale transition-colors hover:grayscale-0"
+                        srcset=""
+                    />
+                </div>
+                <div class="carousel-img h-[30px] w-[150px]">
+                    <img
+                        src="{% static 'assets/images/brand-logos/stripe.svg' %}"
+                        alt="Stripe"
+                        class="h-full w-full object-contain grayscale transition-colors hover:grayscale-0"
+                        srcset=""
+                    />
+                </div>
+                <div class="carousel-img h-[30px] w-[150px]">
+                    <img
+                        src="{% static 'assets/images/brand-logos/reddit.svg' %}"
+                        alt="Reddit"
+                        class="h-full w-full object-contain grayscale transition-colors hover:grayscale-0"
+                        srcset=""
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+        
+    <section class="relative flex  w-full min-h-[100vh] max-lg:min-h-[80vh] flex-col place-content-center place-items-center overflow-hidden">  
+        <div class="w-full  place-content-center items-center flex flex-col max-w-[900px] gap-4 p-4">
+            <div class="purple-bg-grad  reveal-up absolute right-[20%] top-[20%] h-[200px] w-[200px]"
+            ></div>
+            <h2 class="reveal-up text-6xl max-lg:text-4xl text-center leading-normal uppercase">
+                <span class="font-semibold">Build your own AI Apps </span>
+                <br>
+                <span class="font-serif">on top of Pixa APIs</span>
+            </h2>
+            <p class="reveal-up mt-8 max-w-[650px] text-gray-900 dark:text-gray-200 text-center max-md:text-sm">   
+                Pixa's Playground is powered by Pixa's cutting-edge LLM API endpoints. Our powerful models simplify task automation, offering 
+                advanced capabilities in summarization, text generation, and Q&A handling. 
+            </p>
+            <div class="reveal-up flex mt-8">
+                <a href="#" 
+                    target="_blank"
+                    rel="noopener"
+                    class="shadow-md hover:shadow-xl dark:shadow-gray-800 transition-all duration-300 
+                                    border-[1px] p-3 px-4 border-black dark:border-white rounded-md">
+                    Check Pixa APIs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative flex max-w-[100vw] flex-col place-content-center place-items-center overflow-hidden">
+        <div class="mt-8 flex flex-col w-full h-full place-items-center gap-5">
+            <div class="reveal-up mt-5 flex flex-col gap-3 text-center">
+                <h2 class="text-6xl font-medium max-md:text-3xl p-2">
+                    Experience all the benefits of AI
+                </h2>
+            </div>
+            <div class="mt-6 flex flex-col max-w-[1150px] max-lg:max-w-full h-full p-4 max-lg:place-content-center gap-8 ">   
+
+                <div class="max-xl:flex max-xl:flex-col place-items-center grid grid-cols-3 gap-8 
+                            place-content-center auto-rows-auto">
+                    <div class="reveal-up w-[350px] h-[540px] flex max-md:w-full">
                         <a href="#" class=" relative p-10 transition-all duration-300 group/card  gap-5 flex 
-                            max-md:flex-col w-full h-full  bg-[#f6f7fb] dark:bg-[#171717] rounded-3xl 
+                            flex-col w-full h-full  bg-[#f6f7fb] dark:bg-[#171717] rounded-3xl 
                             hover:scale-[1.02]">
-                            <div class="text-6xl overflow-hidden rounded-xl w-full h-full max-md:h-[180px]">
-                                <img src="./assets/images/home/ai-models.png" class="w-full object-contain h-full" 
-                                    alt="AI models">
+                            <div class="overflow-hidden w-full min-h-[180px] h-[180px]">
+                                <img src="{% static 'assets/images/home/api.png' %}" class="w-full object-contain h-auto" 
+                                    alt="unified interface">
                                 <!-- <i class="bi bi-grid-1x2-fill"></i> -->
                             </div>
-                            <div class="flex flex-col gap-4">
-                                <h2 class="text-3xl max-md:text-2xl font-medium">Multiple AI models</h2>
-                                <p class="leading-normal text-gray-800 dark:text-gray-200">
-                                    Pixa supports various AI models, including ChatGPT, Gemini, Claude, Mistral and more, providing a range of advanced capabilities for various language and creative tasks.
-                                </p>
-                                <div class="flex items-center gap-2 mt-auto">
-                                    <span>Learn more</span>
-                                    <i class="bi bi-arrow-right transform transition-transform duration-300 group-hover/card:translate-x-2"></i>
-                                </div>
+                            <h2 class="text-3xl max-md:text-2xl font-medium">Unified interface</h2>
+                            <p class="text-base leading-normal text-gray-800 dark:text-gray-200">
+                                Our's is the only unified AI Interface tool brings together all your favorite chat models into one seamless platform. No more juggling between different AI systems—easily manage and interact with multiple chatbots from a single interface.
+                            </p>
+                            <div class="flex items-center gap-2 mt-auto">
+                                <span>Learn more</span>
+                                <i class="bi bi-arrow-right transform transition-transform duration-300 group-hover/card:translate-x-2"></i>
                             </div>
                         </a>
                     </div>
 
-                </div>
-            </div>
-        </section>
-
-        <section
-            class="relative mt-10 flex min-h-[100vh] w-full max-w-[100vw] flex-col place-items-center lg:p-6"
-        >
-
-            <div
-                class="reveal-up mt-[5%] flex h-full w-full place-content-center 
-                        gap-2 p-4 max-lg:max-w-full max-lg:flex-col"
-            >
-
-                <div
-                    class="relative flex max-w-[30%] max-lg:max-w-full flex-col 
-                            place-items-start gap-4  p-2 max-lg:place-items-center 
-                            max-lg:place-content-center max-lg:w-full"
-                >
-                    <div
-                        class="top-40 flex flex-col lg:sticky place-items-center max-h-fit max-w-[850px] max-lg:max-h-fit max-lg:max-w-[320px] overflow-hidden"
-                    >
-                        <h2 class="text-5xl font-serif text-center font-medium  max-md:text-3xl"
-                            >
-                            Pre-built AI Tools
-                        </h2>
-                        
-                        <a href="http://" class="btn !mt-8 !bg-transparent !text-black 
-                                                !border-[1px] !border-black 
-                                                dark:!border-white dark:!text-white">
-                            Start Chat
-                        </a>
-
-                    </div>
-                   
-                </div>
-
-                <div
-                    class="flex flex-col gap-10 h-full max-w-1/2 max-lg:max-w-full px-[10%]
-                             max-lg:px-4 max-lg:gap-3 max-lg:w-full lg:top-[20%]
-                             place-items-center
-                             "
-                >   
-                    <div class="reveal-up h-[240px] w-[450px] max-md:w-full">
-                        <a href="#"
-                            class="flex w-full h-full gap-8 rounded-xl 
-                                    hover:shadow-lg dark:shadow-[#171717] duration-300 transition-all
-                                  p-8 group/card"
-                        >
-                            <div class="text-4xl max-md:text-2xl">
-                                <i class="bi bi-code-square"></i>
-                            </div>
-
-                            <div class="flex flex-col gap-4">
-                                <h3 class="text-2xl max-md:text-xl">
-                                    AI code generator
-                                </h3>
-                                <p class="text-gray-800 dark:text-gray-100 max-md:text-sm">
-                                    AI code generation tools to create code from natural language or patterns, streamlining development and improving efficiency.
-                                </p>
-
-                                <div class="mt-auto flex gap-2 underline underline-offset-4">
-                                    <span>Learn more</span>
-                                    <i class="bi bi-arrow-up-right group-hover/card:-translate-y-1
-                                                group-hover/card:translate-x-1 duration-300 transition-transform"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="reveal-up h-[240px] w-[450px] max-md:w-full">
-                        <a href="#"
-                            class="flex w-full h-full gap-8 rounded-xl
-                                 hover:shadow-lg dark:shadow-[#171717] duration-300 transition-all p-8 group/card"
-                        >
-                            <div class="text-4xl max-md:text-2xl">
-                                <i class="bi bi-file-pdf-fill"></i>
-                            </div>
-
-                            <div class="flex flex-col gap-4">
-                                <h3 class="text-2xl max-md:text-xl">
-                                    PDF generator
-                                </h3>
-                                <p class="text-gray-800 dark:text-gray-100 max-md:text-sm">
-                                    Use AI tools to automate PDF creation and content extraction, improving document management and data processing.
-                                </p>
-
-                                <div class="mt-auto flex gap-2 underline underline-offset-4">
-                                    <span>Learn more</span>
-                                    <i class="bi bi-arrow-up-right group-hover/card:-translate-y-1
-                                                group-hover/card:translate-x-1 duration-300 transition-transform"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="reveal-up h-[240px] w-[450px] max-md:w-full">
-                        <a href="#"
-                            class="flex w-full h-full gap-8 rounded-xl hover:shadow-lg duration-300 
-                                transition-all dark:shadow-[#171717] p-8 group/card"
-                        >
-                            <div class="text-4xl max-md:text-2xl">
-                                <i class="bi bi-image-fill"></i>
-                            </div>
-
-                            <div class="flex flex-col gap-4">
-                                <h3 class="text-2xl max-md:text-xl">
-                                    Image generation
-                                </h3>
-                                <p class="text-gray-800 dark:text-gray-100 max-md:text-sm">
-                                    Prebuilt AI tools for image generation create visuals from text or patterns, enhancing design and creative projects.
-                                </p>
-
-                                <div class="mt-auto flex gap-2 underline underline-offset-4">
-                                    <span>Learn more</span>
-                                    <i class="bi bi-arrow-up-right group-hover/card:-translate-y-1
-                                                group-hover/card:translate-x-1 duration-300 transition-transform"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="reveal-up h-[240px] w-[450px] max-md:w-full">
-                        <a href="#"
-                            class="flex w-full dark:shadow-[#171717] h-full gap-8 rounded-xl  hover:shadow-lg duration-300 
-                            transition-all p-8 group/card"
-                        >
-                            <div class="text-4xl max-md:text-2xl">
-                                <i class="bi bi-bar-chart-line-fill"></i>
-                            </div>
-
-                            <div class="flex flex-col gap-4">
-                                <h3 class="text-2xl max-md:text-xl">
-                                    AI Analytics
-                                </h3>
-                                <p class="text-gray-800 dark:text-gray-100 max-md:text-sm">
-                                    Our AI analytics tools analyze data patterns and trends, providing actionable insights and enhancing decision-making.
-                                </p>
-
-                                <div class="mt-auto flex gap-2 underline underline-offset-4">
-                                    <span>Learn more</span>
-                                    <i class="bi bi-arrow-up-right group-hover/card:-translate-y-1
-                                                group-hover/card:translate-x-1 duration-300 transition-transform"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
                     
-                    <div class="reveal-up h-[240px] w-[450px] max-md:w-full">
-                        <a href="#"
-                            class="flex w-full h-full gap-8 rounded-xl dark:shadow-[#171717] hover:shadow-lg duration-300 
-                                transition-all p-8 group/card"
-                        >
-                            <div class="text-4xl max-md:text-2xl">
-                                <i class="bi bi-music-note-beamed"></i>
+                    <div class="reveal-up w-[350px] h-[540px] flex max-md:w-full">
+                        <a href="#" class=" relative p-10 transition-all duration-300 group/card  gap-5 flex 
+                            flex-col w-full h-full  bg-[#f6f7fb] dark:bg-[#171717] rounded-3xl 
+                            hover:scale-[1.02]">
+                            <div class="w-full min-h-[180px] h-[180px] overflow-hidden">
+                                <img src="{% static 'assets/images/home/api.png' %}" 
+                                    alt="API" class="w-full h-auto object-contain">
+                                <!-- <i class="bi bi-grid-1x2-fill"></i> -->
                             </div>
-
-                            <div class="flex flex-col gap-4">
-                                <h3 class="text-2xl max-md:text-xl">
-                                    Music generator
-                                </h3>
-                                <p class="text-gray-800 dark:text-gray-100 max-md:text-sm">
-                                    Access our AI music generation tools create original compositions 
-                                    from input parameters, enabling effortless music creation for various needs.
-                                </p>
-
-                                <div class="mt-auto flex gap-2 underline underline-offset-4">
-                                    <span>Learn more</span>
-                                    <i class="bi bi-arrow-up-right group-hover/card:-translate-y-1
-                                                group-hover/card:translate-x-1 duration-300 transition-transform"></i>
-                                </div>
+                            <h2 class="text-3xl max-md:text-2xl font-medium">API Access</h2>
+                            <p class="leading-normal text-gray-800 dark:text-gray-200">
+                                Pixa's LLM API offers advanced summarization, text generation, and question-answering. Easily integrate with support for JSON, HTML, Markdown, and plain text, enhancing your applications with powerful language tools.
+                            </p>
+                            <div class="flex items-center gap-2 mt-auto">
+                                <span>Learn more</span>
+                                <i class="bi bi-arrow-right transform transition-transform duration-300 group-hover/card:translate-x-2"></i>
                             </div>
                         </a>
                     </div>
 
-                    <div class="reveal-up h-[240px] w-[450px] max-md:w-full">
-                        <a href="#"
-                            class="flex w-full h-full gap-8 rounded-xl 
-                                    hover:shadow-lg dark:shadow-[#171717] duration-300 transition-all p-8 group/card"
-                        >
-                            <div class="text-4xl max-md:text-2xl">
-                                <i class="bi bi-camera-video-fill"></i>
-                            </div>
-
-                            <div class="flex flex-col gap-4">
-                                <h3 class="text-2xl max-md:text-xl">
-                                    Video generator
-                                </h3>
-                                <p class="text-gray-800 dark:text-gray-100 max-md:text-sm">
-                                    Use our AI video generation tools create videos from text or templates, streamlining content creation and production.
-                                </p>
-
-                                <div class="mt-auto flex gap-2 underline underline-offset-4">
-                                    <span>Learn more</span>
-                                    <i class="bi bi-arrow-up-right group-hover/card:-translate-y-1
-                                                group-hover/card:translate-x-1 duration-300 transition-transform"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-
-                
-            </div>
-        </section>
-
-
-        <section
-            class="relative flex w-full min-h-[110vh] max-md:min-h-[80vh] flex-col place-content-center place-items-center overflow-hidden"
-        >   
-             <div class="w-full max-lg:max-w-full place-content-center items-center 
-                        flex flex-col max-w-[80%] gap-4 p-4">
-               
-                <h3 class="reveal-up text-5xl font-medium max-md:text-3xl text-center leading-normal">
-                    Additional Features
-                </h3>
-                <!-- <p class="reveal-up mt-3 max-w-[600px] text-center ">
-                </p> -->
-                
-                <div class="mt-8 relative gap-10 p-4 grid place-items-center grid-cols-3 max-lg:flex max-lg:flex-col">
-
-
-                    <div class="reveal-up  w-[350px] border-[1px] h-[400px] rounded-md place-items-center p-4
-                                 bg-[#f2f3f4] max-md:w-[320px] dark:bg-[#141414] dark:border-[#1f2123] flex flex-col gap-3">
-
-                        <div class="w-full h-[250px]
-                                    p-4
-                                    rounded-xl 
-                                     backdrop-blur-2xl
-                                     overflow-hidden flex place-content-center">
-                            <img src="./assets/images/home/prompts2.png" 
-                                    alt="Prompt library" class="w-auto h-full object-contain">
-                        </div>
-                        <h3 class="text-2xl">
-                            Prompt Library
-                        </h3>
-                        <p class="text-gray-700 dark:text-gray-300 px-4 text-center text-sm">
-                            Forget about writing your own prompt, use the prompt templates and supercharge your
-                            workflow.
-                        </p>
-                    </div>
                     
-                    <div class="reveal-up w-[350px] max-md:w-[320px] border-[1px] h-[400px] rounded-md place-items-center p-4
-                                 bg-[#f2f3f4] dark:bg-[#141414] dark:border-[#1f2123] flex flex-col gap-3">
-
-                        <div class="w-full h-[250px]
-                                    p-4
-                                    rounded-xl 
-                                     backdrop-blur-2xl
-                                     overflow-hidden flex place-content-center">
-                            <img src="./assets/images/home/search.png" 
-                                    alt="Web search" class="w-auto h-full object-contain">
-                        </div>
-                        <h3 class="text-2xl">
-                            Real-time web search
-                        </h3>
-                        <p class="text-gray-700 dark:text-gray-300 px-4 text-center text-sm">
-                            Our Real-time web search AI Bot provides instant, live search results directly within the AI chat playground.
-                        </p>
+                    <div class="reveal-up w-[350px] h-[540px] flex max-md:w-full">
+                        <a href="#" class=" relative p-10 transition-all duration-300 group/card  gap-5 flex 
+                            flex-col w-full h-full  bg-[#f6f7fb] dark:bg-[#171717] rounded-3xl 
+                            hover:scale-[1.02]">
+                            <div class="w-full flex place-contet-center min-h-[180px] h-[180px] rounded-xl overflow-hidden">
+                                <img src="{% static 'assets/images/home/integrations1.png' %}" class="w-full h-auto object-contain" 
+                                        alt="Prebuilt integrations">
+                            </div>
+                            <h2 class="text-3xl max-md:text-2xl font-medium">Pre-built Tools</h2>
+                            <p class="leading-normal text-gray-800 dark:text-gray-200">
+                                Pixa offers pre-built AI integrations for diverse creative tasks including image, video, music, and PDF generation, simplifying advanced feature integration into your apps.
+                            </p>
+                            <div class="flex items-center gap-2 mt-auto">
+                                <span>Learn more</span>
+                                <i class="bi bi-arrow-right transform transition-transform duration-300 group-hover/card:translate-x-2"></i>
+                            </div>
+                        </a>
                     </div>
-
-                    <div class="reveal-up w-[350px] max-md:w-[320px] border-[1px] h-[400px] rounded-lg place-items-center p-4
-                                 bg-[#f2f3f4] dark:bg-[#141414] dark:border-[#1f2123] flex flex-col gap-3">
-
-                        <div class="w-full h-[250px]
-                                    p-4
-                                    rounded-xl 
-                                     backdrop-blur-2xl
-                                     overflow-hidden flex place-content-center">
-                            <img src="./assets/images/home/image.png" 
-                                    alt="Image generation" class="w-auto h-full object-contain">
-                        </div>
-                        <h3 class="text-2xl">
-                            Image Generation
-                        </h3>
-                        <p class="text-gray-700 dark:text-gray-300 px-4 text-center text-sm">
-                            Generate Image instantly from multiple models, create visuals from text descriptions or templates.
-                        </p>
-                    </div>
-
-                    <div class="reveal-up w-[350px] max-md:w-[320px] border-[1px] h-[400px] rounded-lg place-items-center p-4
-                                 bg-[#f2f3f4] dark:bg-[#141414] dark:border-[#1f2123] flex flex-col gap-3">
-
-                        <div class="w-full h-[250px]
-                                    p-4
-                                     rounded-xl 
-                                     backdrop-blur-2xl
-                                     overflow-hidden flex place-content-center">
-                            <img src="./assets/images/home/history.png" 
-                                    alt="History" class="w-auto h-full object-contain">
-                        </div>
-                        <h3 class="text-2xl">
-                            History
-                        </h3>
-                        <p class="text-gray-700 dark:text-gray-300 px-4 text-center text-sm">
-                            All of the models can recall previous topic, so you 
-                            can continue your conversation at any point of time. 
-                        </p>
-                    </div>
-
-                    <div class="reveal-up w-[350px] max-md:w-[320px] border-[1px] h-[400px] rounded-lg place-items-center p-4
-                                 bg-[#f2f3f4] dark:bg-[#141414] dark:border-[#1f2123] flex flex-col gap-3">
-
-                        <div class="w-full h-[250px]
-                                    p-4
-                                    rounded-xl 
-                                     backdrop-blur-2xl
-                                     overflow-hidden flex place-content-center">
-                            <img src="./assets/images/home/import.png" 
-                                    alt="Import content" class="w-auto h-full object-contain">
-                        </div>
-                        <h3 class="text-2xl">
-                            Import content
-                        </h3>
-                        <p class="text-gray-700 dark:text-gray-300 px-4 text-center text-sm">
-                            Effortlessly import PDFs, images, and documents. Use AI to ask questions, extract information, and summarize documents.
-                        </p>
-                    </div>
-
-                    <div class="reveal-up w-[350px] max-md:w-[320px] border-[1px] h-[400px] rounded-lg place-items-center p-4
-                                 bg-[#f2f3f4] dark:bg-[#141414] dark:border-[#1f2123] flex flex-col gap-3">
-
-                        <div class="w-full h-[250px]
-                                    p-4
-                                    rounded-xl 
-                                     backdrop-blur-2xl
-                                     overflow-hidden flex place-content-center">
-                            <img src="./assets/images/home/multilingual.png" 
-                                    alt="Multilingual" class="w-auto h-full object-contain">
-                        </div>
-                        <h3 class="text-2xl">
-                            Multilingual support
-                        </h3>
-                        <p class="text-gray-700 dark:text-gray-300 px-4 text-center text-sm">
-                            ChatGPT, and Gemini can understand and respond in over 100 languages.
-                        </p>
-                    </div>
-
                 </div>
-
-            </div>
-        </section>
-
-        <section
-            class="relative flex  w-full min-h-[100vh] max-md:min-h-[80vh] flex-col place-content-center place-items-center overflow-hidden"
-        >   
-            <div class="w-full max-lg:max-w-full place-content-center place-items-center 
-                        flex flex-col max-w-[80%] gap-4 p-4">
-               
-                <h3 class="reveal-up text-5xl font-medium max-md:text-3xl text-center leading-normal">
-                    One Subscription for it all
-                </h3>
-                <p class="reveal-up mt-3 max-w-[600px] text-center ">
-                    Why pay for multiple expensive subscriptions when one subscription can do it all?
-                    Access multiple AI models and save 1000's of dollar per year. 
-                </p>
                 
-                <div class="mt-8 relative flex max-lg:flex-col gap-5">
-
-                    <div
-                        class="reveal-up flex w-full max-w-[650px] max-md:max-w-full flex-col place-items-center gap-2 rounded-lg border-[1px]
-                            border-outlineColor bg-white dark:bg-[#080808] dark:border-[#1f2123] p-2 shadow-xl max-lg:w-[320px]"
-                            >
-                        <img src="./assets/images/home/multi-sub.png" 
-                            alt="Multi sub">
-                    </div>
-
-                     <div
-                        class="reveal-up flex w-full max-w-[650px] flex-col place-items-center gap-2 rounded-lg border-[1px]
-                            border-outlineColor bg-white dark:bg-[#080808] dark:border-[#1f2123] p-2 shadow-xl max-lg:w-[320px]"
-                            >
-                        <img src="./assets/images/home/single-sub.jpg" 
-                            alt="Single sub">
-                    </div>
-
-                </div>
-
-                <a href="#" class="reveal-up group shadow-xl btn flex gap-2 mt-10">
-                    <span>Start Chat</span>
-                    <i class="bi bi-arrow-right duration-300 group-hover:translate-x-1"></i>
-                </a>
-
-            </div>
-        </section>
-
-        <section
-            class="flex min-h-[100vh] w-full flex-col place-content-center place-items-center p-[2%]"
-        >
-            <h3
-                class="reveal-up text-4xl font-medium text-center max-md:text-2xl"
-            >
-                Join the professionals using Pixa
-            </h3>
-            <!-- Testimonials -->
-            <div
-                class="mt-20 gap-10 space-y-8  max-md:columns-1 lg:columns-2 xl:columns-3"
-            >
-                <div
-                    class="reveal-up flex h-fit w-[350px] break-inside-avoid 
-                        flex-col gap-4 rounded-lg border-[1px] 
-                        bg-[#f6f7fb] dark:bg-[#080808] dark:border-[#1f2123] p-4 max-lg:w-[320px]"
-                >   
-
-                    <div class="flex place-items-center gap-3">
-                        <div
-                            class="h-[50px] w-[50px] overflow-hidden rounded-full"
-                        >
-                            <img
-                                src="./assets/images/people/man2.jpg"
-                                class="h-full w-full object-cover"
-                                alt="man"
-                            />
+                <div class="reveal-up w-full md:h-[350px] max-md:min-h-[350px] flex">
+                    <a href="#" class=" relative p-10 transition-all duration-300 group/card  gap-5 flex 
+                        max-md:flex-col w-full h-full  bg-[#f6f7fb] dark:bg-[#171717] rounded-3xl 
+                        hover:scale-[1.02]">
+                        <div class="text-6xl overflow-hidden rounded-xl w-full h-full max-md:h-[180px]">
+                            <img src="{% static 'assets/images/home/ai-models.png' %}" class="w-full object-contain h-full" 
+                                alt="AI models">
+                            <!-- <i class="bi bi-grid-1x2-fill"></i> -->
                         </div>
-                        <div class="flex flex-col gap-1">
-                            <div class="font-semibold">Mante</div>
-                            <div class="text-gray-700 dark:text-gray-300">Glu, cto</div>
+                        <div class="flex flex-col gap-4">
+                            <h2 class="text-3xl max-md:text-2xl font-medium">Multiple AI models</h2>
+                            <p class="leading-normal text-gray-800 dark:text-gray-200">
+                                Pixa supports various AI models, including ChatGPT, Gemini, Claude, Mistral and more, providing a range of advanced capabilities for various language and creative tasks.
+                            </p>
+                            <div class="flex items-center gap-2 mt-auto">
+                                <span>Learn more</span>
+                                <i class="bi bi-arrow-right transform transition-transform duration-300 group-hover/card:translate-x-2"></i>
+                            </div>
                         </div>
-                    </div>
-
-                    <p class="mt-4 text-gray-800 dark:text-gray-200">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Beatae, vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolore deleniti iusto Numquam!
-                    </p>
-                </div>
-
-                 <div
-                    class="reveal-up flex h-fit w-[350px] break-inside-avoid 
-                        flex-col gap-4 rounded-lg border-[1px] 
-                        bg-[#f6f7fb] dark:bg-[#080808] dark:border-[#1f2123] p-4 max-lg:w-[320px]"
-                >   
-
-                    <div class="flex place-items-center gap-3">
-                        <div
-                            class="h-[50px] w-[50px] overflow-hidden rounded-full"
-                        >
-                            <img
-                                src="./assets/images/people/women.jpg"
-                                class="h-full w-full object-cover"
-                                alt="women"
-                            />
-                        </div>
-                        <div class="flex flex-col gap-1">
-                            <div class="font-semibold">Trich B</div>
-                            <div class="text-gray-700 dark:text-gray-300">AMI, ceo</div>
-                        </div>
-                    </div>
-
-                    <p class="mt-4 text-gray-800 dark:text-gray-200">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Beatae, vero. Lorem ipsum dolor sit amet.
-                    </p>
-                </div>
-
-                 <div
-                    class="reveal-up flex h-fit w-[350px] break-inside-avoid 
-                        flex-col gap-4 rounded-lg border-[1px] 
-                        bg-[#f6f7fb] dark:bg-[#080808] dark:border-[#1f2123] p-4 max-lg:w-[320px]"
-                >   
-
-                    <div class="flex place-items-center gap-3">
-                        <div
-                            class="h-[50px] w-[50px] overflow-hidden rounded-full"
-                        >
-                            <img
-                                src="./assets/images/people/man.jpg"
-                                class="h-full w-full object-cover"
-                                alt="man"
-                            />
-                        </div>
-                        <div class="flex flex-col gap-1">
-                            <div class="font-semibold">John B</div>
-                            <div class="text-gray-700 dark:text-gray-300">Benz, ceo</div>
-                        </div>
-                    </div>
-
-                    <p class="mt-4 text-gray-800 dark:text-gray-200">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, expedita nihil repellendus accusamus itaque facere labore, suscipit tempore in harum repellat. Doloribus, dolor facere dolorem impedit facilis rerum beatae exercitationem aliquid porro ea architecto similique illo omnis odio consequatur modi.
-                    </p>
-                </div>
-
-                 <div
-                    class="reveal-up flex h-fit w-[350px] break-inside-avoid 
-                        flex-col gap-4 rounded-lg border-[1px] 
-                        bg-[#f6f7fb] dark:bg-[#080808] dark:border-[#1f2123] p-4 max-lg:w-[320px]"
-                >   
-
-                    <div class="flex place-items-center gap-3">
-                        <div
-                            class="h-[50px] w-[50px] overflow-hidden rounded-full"
-                        >
-                            <img
-                                src="./assets/images/people/man2.jpg"
-                                class="h-full w-full object-cover"
-                                alt="man"
-                            />
-                        </div>
-                        <div class="flex flex-col gap-1">
-                            <div class="font-semibold">Ben Alfert B</div>
-                            <div class="text-gray-700 dark:text-gray-300">XZ tech, cto</div>
-                        </div>
-                    </div>
-
-                    <p class="mt-4 text-gray-800 dark:text-gray-200">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Beatae, vero.
-                    </p>
-                </div>
-
-                 <div
-                    class="reveal-up flex h-fit w-[350px] break-inside-avoid 
-                        flex-col gap-4 rounded-lg border-[1px] 
-                        bg-[#f6f7fb] dark:bg-[#080808] dark:border-[#1f2123] p-4 max-lg:w-[320px]"
-                >   
-
-                    <div class="flex place-items-center gap-3">
-                        <div
-                            class="h-[50px] w-[50px] overflow-hidden rounded-full"
-                        >
-                            <img
-                                src="./assets/images/people/women.jpg"
-                                class="h-full w-full object-cover"
-                                alt="women"
-                            />
-                        </div>
-                        <div class="flex flex-col gap-1">
-                            <div class="font-semibold">Rachel</div>
-                            <div class="text-gray-700 dark:text-gray-300">Gem, cto</div>
-                        </div>
-                    </div>
-
-                    <p class="mt-4 text-gray-800 dark:text-gray-200">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Beatae, vero. Lorem, ipsum dolor.
-                    </p>
-                </div>
-
-                 <div
-                    class="reveal-up flex h-fit w-[350px] break-inside-avoid 
-                        flex-col gap-4 rounded-lg border-[1px] 
-                        bg-[#f6f7fb] dark:bg-[#080808] dark:border-[#1f2123] p-4 max-lg:w-[320px]"
-                >   
-
-                    <div class="flex place-items-center gap-3">
-                        <div
-                            class="h-[50px] w-[50px] overflow-hidden rounded-full"
-                        >
-                            <img
-                                src="./assets/images/people/man.jpg"
-                                class="h-full w-full object-cover"
-                                alt="man"
-                            />
-                        </div>
-                        <div class="flex flex-col gap-1">
-                            <div class="font-semibold">Jamie</div>
-                            <div class="text-gray-700 dark:text-gray-300">SnapFist.ai, ceo</div>
-                        </div>
-                    </div>
-
-                    <p class="mt-4 text-gray-800 dark:text-gray-200">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, nihil vitae fuga ab reiciendis optio et corporis dolorem alias deserunt, molestias in iusto! Ratione, quisquam incidunt. Reprehenderit ipsam officiis enim.
-                    </p>
-                </div>
-               
-            </div>
-        </section>
-
-
-        <section
-            class="mt-5 flex w-full flex-col gap-6 place-items-center p-[2%]"
-            id="pricing"
-        >
-            <h3
-                class="reveal-up text-5xl font-medium max-md:text-2xl"
-            >
-                Choose the right plan for you
-            </h3>
-            <!-- pricing -->
-            <div
-                class="mt-10 flex flex-wrap place-content-center gap-8 max-lg:flex-col"
-            >
-                <div
-                    class="reveal-up flex w-[350px] flex-col place-items-center gap-2 rounded-lg border-[1px]
-                            border-outlineColor bg-white dark:bg-[#080808] dark:border-[#1f2123] p-8 shadow-xl max-lg:w-[320px]"
-                >
-                    <h3 class="">
-                        <span class="text-5xl max-md:text-3xl font-semibold">$9</span>
-                        <span class="text-2xl text-gray-600 dark:text-gray-300">/mo</span>
-                    </h3>
-                    <p class="mt-3 text-center text-gray-800 dark:text-gray-100">
-                       Essential AI tools for everyday use
-                    </p>
-                    <hr />
-                    <ul
-                        class="mt-4 flex flex-col gap-4 text-base text-gray-800 dark:text-gray-200"
-                    >
-                        <li class="flex gap-2">
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>1,000 AI powered chat messages</span>    
-                        </li>
-                        <li class="flex gap-2">
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>30 premium image generations</span>    
-                        </li>
-                        <li class="flex gap-2">
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>10 premium  music generation</span>    
-                        </li>
-
-                        <li class="flex gap-2 ">
-                            <i class="bi bi-check-circle-fill text-gray-400 dark:text-gray-500"></i>
-                            <span>Access to all premium AI models</span>    
-                        </li>
-
-                        <li class="flex gap-2 ">
-                            <i class="bi bi-check-circle-fill text-gray-400 dark:text-gray-500"></i>
-                            <span>Early access to new features</span>    
-                        </li>
-                  
-                    </ul>
-                    <a
-                        href="#"
-                        class="btn mt-auto !w-full transition-transform duration-[0.3s] 
-                                hover:scale-x-[1.02] !text-black !bg-transparent !border-[1px]
-                                 border-black dark:border-white dark:!text-white"
-                    >
-                        Choose plan
                     </a>
                 </div>
-                
-                <div
-                    class="reveal-up flex w-[350px] flex-col place-items-center gap-2 rounded-lg border-2
-                            border-outlineColor bg-white dark:bg-[#080808] dark:border-[#595858] p-8 shadow-xl max-lg:w-[320px]"
-                >
-                    <h3 class="">
-                        <span class="text-5xl max-md:text-3xl  font-semibold">$17</span>
-                        <span class="text-2xl max-md:text-xl  text-gray-600 dark:text-gray-300">/mo</span>
-                    </h3>
-                    <p class="mt-3 text-center text-gray-800 dark:text-gray-200">
-                        Advanced features for serious AI enthusiasts.
-                    </p>
-                    <hr />
-                    <ul
-                        class="mt-4 flex flex-col gap-4  text-base text-gray-800 dark:text-gray-100"
-                    >
-                        <li class="flex gap-2">
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>5,000 AI powered chat messages</span>    
-                        </li>
-                        <li class="flex gap-2">
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>100 premium image generations</span>    
-                        </li>
-                        <li class="flex gap-2">
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>40 premium music generation</span>    
-                        </li>
-
-                        <li class="flex gap-2 ">
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Access to all premium AI models</span>    
-                        </li>
-
-                        <li class="flex gap-2 ">
-                            <i class="bi bi-check-circle-fill text-gray-400 dark:text-gray-500"></i>
-                            <span>Early access to new features</span>    
-                        </li>
-                  
-                    </ul>
-                    <a
-                        href="#"
-                        class="btn mt-auto !w-full transition-transform duration-[0.3s] hover:scale-x-[1.02]"
-                    >
-                        Choose plan
-                    </a>
-                </div>
-
-                <div
-                    class="reveal-up flex w-[350px] flex-col place-items-center gap-2 rounded-lg border-[1px]
-                            border-outlineColor dark:bg-[#080808] dark:border-[#1f2123] bg-white p-8 shadow-xl max-lg:w-[320px]"
-                >
-                    <h3 class="">
-                        <span class="text-5xl max-md:text-3xl font-semibold">$29</span>
-                        <span class="text-2xl text-gray-600 dark:text-gray-300">/mo</span>
-                    </h3>
-                    <p class="mt-3 text-center text-gray-800 dark:text-gray-100">
-                        Unlimited potential for power users
-                    </p>
-                    <hr />
-                    <ul
-                        class="mt-4 flex flex-col gap-4 text-base 
-                                text-gray-800 dark:text-gray-200"
-                    >
-                        <li class="flex gap-2">
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>10,000 AI powered chat messages</span>    
-                        </li>
-                        <li class="flex gap-2">
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>300 premium image generations</span>    
-                        </li>
-                        <li class="flex gap-2">
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>100 premium music generations</span>    
-                        </li>
-
-                        <li class="flex gap-2 ">
-                            <i class="bi bi-check-circle-fill"></i>
-                            <span>Access to all premium AI models</span>    
-                        </li>
-
-                        <li class="flex gap-2 ">
-                            <i class="bi bi-check-circle-fill "></i>
-                            <span>Early access to new features</span>    
-                        </li>
-                  
-                    </ul>
-                    <a
-                        href="#"
-                        class="btn mt-8 !w-full transition-transform duration-[0.3s] 
-                                hover:scale-x-[1.02] !text-black !bg-transparent 
-                                !border-[1px] border-black dark:border-white dark:!text-white"
-                    >
-                        Choose plan
-                    </a>
-                </div>
-
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section
-            class="mt-5 flex min-h-[80vh] w-full flex-col place-content-center place-items-center p-[2%] max-lg:p-3"
-        >
-            <h3
-                class="reveal-up text-4xl font-medium max-md:text-2xl"
-            >
-                Read resources by experts ✨
-            </h3>
-            <!-- articles -->
-        
-            <div
-                class="reveal-up mt-10 flex flex-wrap place-content-center gap-10 max-lg:flex-col"
-            >
-                <a
-                    href="#"
-                    class="flex h-[500px] w-[400px] flex-col gap-2 overflow-clip rounded-lg p-4 max-lg:w-[350px]"
-                >
-                    <div
-                        class="h-[350px] min-h-[350px] w-full overflow-hidden rounded-2xl"
-                    >
-                        <img
-                            src="./assets/images/home/article1.png"
-                            alt="article image"
-                            class="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.3]"
-                            srcset=""
-                        />
-                    </div>
+    <section class="relative mt-10 flex min-h-[100vh] w-full max-w-[100vw] flex-col place-items-center lg:p-6">
 
-                    <div class="text-gray-600 dark:text-gray-300 justify-between flex gap-2">
-                        <div class="text-gray-800 dark:text-gray-200">
-                            Machine learning
-                        </div>
-                        <div class="text-gray-600 dark:text-gray-400">
-                            Jul, 17, 2024
-                        </div>
-                    </div>
-                    <h3
-                        class="mt-1 font-medium text-xl max-md:text-xl"
-                    >
-                        Latest AI tools
-                    </h3>
-                    
-                </a>
-                
-                <a
-                    href="#"
-                    class="flex h-[500px] w-[400px] flex-col gap-2 overflow-clip rounded-lg p-4 max-lg:w-[350px]"
-                >
-                    <div
-                        class="h-[350px] min-h-[350px] w-full overflow-hidden rounded-2xl"
-                    >
-                        <img
-                            src="./assets/images/home/article2.jpg"
-                            alt="article image"
-                            class="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.3]"
-                            srcset=""
-                        />
-                    </div>
+        <div class="reveal-up mt-[5%] flex h-full w-full place-content-center gap-2 p-4 max-lg:max-w-full max-lg:flex-col">
 
-                    <div class="text-gray-600 dark:text-gray-300 justify-between flex gap-2">
-                        <div class="text-gray-800 dark:text-gray-200">
-                            Announcement
-                        </div>
-                        <div class="text-gray-600 dark:text-gray-400">
-                            June, 22, 2024
-                        </div>
-                    </div>
-                    <h3
-                        class="mt-1 font-medium text-xl max-md:text-xl"
-                    >
-                        Pixa Unveils new technology
-                    </h3>
-                    
-                </a>
-
-                <a
-                    href="#"
-                    class="flex h-[500px] w-[400px] flex-col gap-2 overflow-clip rounded-lg p-4 max-lg:w-[350px]"
-                >
-                    <div
-                        class="h-[350px] min-h-[350px] w-full overflow-hidden rounded-2xl"
-                    >
-                        <img
-                            src="./assets/images/home/article3.png"
-                            alt="article image"
-                            class="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.3]"
-                            srcset=""
-                        />
-                    </div>
-
-                    <div class="text-gray-600 dark:text-gray-300 justify-between flex gap-2">
-                        <div class="text-gray-800 dark:text-gray-200">
-                            Announcement
-                        </div>
-                        <div class="text-gray-600 dark:text-gray-400">
-                            Apr, 27, 2024
-                        </div>
-                    </div>
-                    <h3
-                        class="mt-1 font-medium text-xl max-md:text-xl"
-                    >
-                        Launching Pixa playground
-                    </h3>
-                    
-                </a>
-
-            </div>
-        </section>
-
-        <section
-            class="relative flex w-full flex-col place-content-center place-items-center gap-[10%] p-[5%] px-[10%]"
-        >   
-
-
-            <h3
-                class="text-4xl font-medium max-md:text-2xl"
-            >
-                Faq
-            </h3>
-            <div
-                class="mt-5 flex min-h-[300px] w-full max-w-[850px] flex-col gap-4"
-            >
-                <div
-                    class="faq w-full"
-                >
-                    <h4
-                        class="faq-accordion flex w-full select-none text-xl max-md:text-lg"
-                    >
-                        <span>What's Pixa playground?</span>
-                        <i class="bi bi-plus text-xl origin-center duration-300 transition-transform 
-                                    ml-auto font-semibold"></i>
-                    </h4>
-                    <div class="content max-lg:text-sm">
-                        Pixa's playground is an integrated webapp to seamlessly test different LLM models such as GPT4, Claude,
-                        Gemini, etc.
-                    </div>
-                </div>
-                <hr>
-                <div
-                    class="faq w-full"
-                >
-                    <h4
-                        class="faq-accordion flex w-full select-none text-xl max-md:text-lg"
-                    >
-                        <span>What are LLM?</span>
-                        <i class="bi bi-plus text-xl origin-center duration-300 transition-transform 
-                                    ml-auto font-semibold"></i>
-                    </h4>
-                    <div class="content max-lg:text-sm">
-                        LLM stands for "Large Language Model." It's a type of artificial intelligence model trained on vast amounts of text data to understand and generate human-like text. These models, like GPT-4, can perform various tasks, such as answering questions, generating content, translating languages, and more, by leveraging patterns learned from the data they were trained on.
-                    </div>
-                </div>
-                <hr>
-                <div
-                    class="faq w-full"
-                >
-                    <h4
-                        class="faq-accordion flex w-full select-none text-xl max-md:text-lg"
-                    >
-                        <span>Where can I test different AI models?</span>
-                        <i class="bi bi-plus text-xl origin-center duration-300 transition-transform 
-                                    ml-auto font-semibold"></i>
-                    </h4>
-                    <div class="content max-lg:text-sm">
-                        You can use Pixa's AI Playground to test different models, including
-                        GPT4, Claude, Perplexity and more. 
-                    </div>
-                </div>
-                <hr>
-
-                <div
-                    class="faq w-full"
-                >
-                    <h4
-                        class="faq-accordion flex w-full select-none text-xl max-md:text-lg"
-                    >
-                        <span>Is Pixa Free to use?</span>
-                        <i class="bi bi-plus text-xl origin-center duration-300 transition-transform 
-                                    ml-auto font-semibold"></i>
-                    </h4>
-                    <div class="content max-lg:text-sm">
-                        You can start using Pixa for free, and later upgrade your plan to access all its features.
-                    </div>
-                </div>
-                <hr>
-                
-            </div>
-            <div class="purple-bg-grad max-md:hidden reveal-up absolute bottom-14 right-[20%] 
-                                 h-[150px] w-[150px] rounded-full"
-                ></div>
-           
-        </section>
-
-        <section
-            class="relative flex p-2  w-full min-h-[60vh]  flex-col place-content-center place-items-center overflow-hidden"
-        >   
-             <div class="reveal-up w-full h-full min-h-[450px] max-lg:max-w-full rounded-md lg:py-[5%] bg-[#f6f7fb] dark:bg-[#171717] place-content-center items-center 
-                        flex flex-col max-w-[80%] gap-4 p-4">
-               
-                <h3 class="reveal-up text-5xl font-medium max-md:text-3xl text-center leading-normal">
-                    Access and compare multiple AI models 
-                </h3>
-              
-                <div class="mt-8 relative flex max-lg:flex-col gap-5">
-
-                    <a href="#" class="btn  reveal-up !rounded-full !p-4 font-medium">
-                        Launch Playground
-                    </a>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="flex w-full flex-col place-content-center place-items-center gap-[10%] p-[5%] px-[10%] max-md:px-2">
-            <div
-                class="flex w-full max-w-[80%] place-content-center place-items-center justify-between gap-3 
-                        rounded-lg bg-[#F6F7FB] dark:bg-[#171717] p-6 max-md:max-w-full max-md:flex-col"
-            >
-                <div class="flex flex-col max-lg:text-center gap-1">
-                    <h2 class="text-2xl text-gray-800 dark:text-gray-200 max-md:text-xl">
-                        Join our newsletter
+            <div class="relative flex max-w-[30%] max-lg:max-w-full flex-col place-items-start gap-4  p-2 max-lg:place-items-center max-lg:place-content-center max-lg:w-full">
+                <div class="top-40 flex flex-col lg:sticky place-items-center max-h-fit max-w-[850px] max-lg:max-h-fit max-lg:max-w-[320px] overflow-hidden">
+                    <h2 class="text-5xl font-serif text-center font-medium  max-md:text-3xl">
+                        Pre-built AI Tools
                     </h2>
-                    <div class="text-gray-700 dark:text-gray-300">Get product insights and updates.</div>
-                </div>
+                    
+                    <a href="http://" class="btn !mt-8 !bg-transparent !text-black !border-[1px] !border-black dark:!border-white dark:!text-white">
+                        Start Chat
+                    </a>
 
-                <div
-                    class="flex h-[60px] place-items-center gap-2 overflow-hidden p-2"
-                >
-                    <input
-                        type="email"
-                        class="input h-full w-full !border-gray-600 p-2 outline-none"
-                        placeholder="email"
-                    />
-                    <a
-                        class="btn !rounded-full !border-[1px] !text-black !border-solid !border-black  dark:!text-white
-                            dark:!border-gray-300 !bg-transparent transition-colors duration-[0.3s]"
-                        href=""
-                    >
-                        Signup
+                </div>
+                
+            </div>
+
+            <div class="flex flex-col gap-10 h-full max-w-1/2 max-lg:max-w-full px-[10%] max-lg:px-4 max-lg:gap-3 max-lg:w-full lg:top-[20%] place-items-center">   
+                <div class="reveal-up h-[240px] w-[450px] max-md:w-full">
+                    <a href="#" class="flex w-full h-full gap-8 rounded-xl hover:shadow-lg dark:shadow-[#171717] duration-300 transition-all p-8 group/card">
+                        <div class="text-4xl max-md:text-2xl">
+                            <i class="bi bi-code-square"></i>
+                        </div>
+
+                        <div class="flex flex-col gap-4">
+                            <h3 class="text-2xl max-md:text-xl">
+                                AI code generator
+                            </h3>
+                            <p class="text-gray-800 dark:text-gray-100 max-md:text-sm">
+                                AI code generation tools to create code from natural language or patterns, streamlining development and improving efficiency.
+                            </p>
+
+                            <div class="mt-auto flex gap-2 underline underline-offset-4">
+                                <span>Learn more</span>
+                                <i class="bi bi-arrow-up-right group-hover/card:-translate-y-1 group-hover/card:translate-x-1 duration-300 transition-transform"></i>
+                            </div>
+                        </div>
                     </a>
                 </div>
-            </div>
-        </section>
 
-        {% include 'base/footer.html' %}
+                <div class="reveal-up h-[240px] w-[450px] max-md:w-full">
+                    <a href="#" class="flex w-full h-full gap-8 rounded-xl hover:shadow-lg dark:shadow-[#171717] duration-300 transition-all p-8 group/card">
+                        <div class="text-4xl max-md:text-2xl">
+                            <i class="bi bi-file-pdf-fill"></i>
+                        </div>
 
+                        <div class="flex flex-col gap-4">
+                            <h3 class="text-2xl max-md:text-xl">
+                                PDF generator
+                            </h3>
+                            <p class="text-gray-800 dark:text-gray-100 max-md:text-sm">
+                                Use AI tools to automate PDF creation and content extraction, improving document management and data processing.
+                            </p>
+
+                            <div class="mt-auto flex gap-2 underline underline-offset-4">
+                                <span>Learn more</span>
+                                <i class="bi bi-arrow-up-right group-hover/card:-translate-y-1 group-hover/card:translate-x-1 duration-300 transition-transform"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="reveal-up h-[240px] w-[450px] max-md:w-full">
+                    <a href="#" class="flex w-full h-full gap-8 rounded-xl hover:shadow-lg duration-300 transition-all dark:shadow-[#171717] p-8 group/card">
+                        <div class="text-4xl max-md:text-2xl">
+                            <i class="bi bi-image-fill"></i>
+                        </div>
+
+                        <div class="flex flex-col gap-4">
+                            <h3 class="text-2xl max-md:text-xl">
+                                Image generation
+                            </h3>
+                            <p class="text-gray-800 dark:text-gray-100 max-md:text-sm">
+                                Prebuilt AI tools for image generation create visuals from text or patterns, enhancing design and creative projects.
+                            </p>
+
+                            <div class="mt-auto flex gap-2 underline underline-offset-4">
+                                <span>Learn more</span>
+                                <i class="bi bi-arrow-up-right group-hover/card:-translate-y-1 group-hover/card:translate-x-1 duration-300 transition-transform"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="reveal-up h-[240px] w-[450px] max-md:w-full">
+                    <a href="#" class="flex w-full dark:shadow-[#171717] h-full gap-8 rounded-xl  hover:shadow-lg duration-300 
+                        transition-all p-8 group/card" >
+                        <div class="text-4xl max-md:text-2xl">
+                            <i class="bi bi-bar-chart-line-fill"></i>
+                        </div>
+
+                        <div class="flex flex-col gap-4">
+                            <h3 class="text-2xl max-md:text-xl">
+                                AI Analytics
+                            </h3>
+                            <p class="text-gray-800 dark:text-gray-100 max-md:text-sm">
+                                Our AI analytics tools analyze data patterns and trends, providing actionable insights and enhancing decision-making.
+                            </p>
+
+                            <div class="mt-auto flex gap-2 underline underline-offset-4">
+                                <span>Learn more</span>
+                                <i class="bi bi-arrow-up-right group-hover/card:-translate-y-1 group-hover/card:translate-x-1 duration-300 transition-transform"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="reveal-up h-[240px] w-[450px] max-md:w-full">
+                    <a href="#" class="flex w-full h-full gap-8 rounded-xl dark:shadow-[#171717] hover:shadow-lg duration-300 
+                            transition-all p-8 group/card">
+                        <div class="text-4xl max-md:text-2xl">
+                            <i class="bi bi-music-note-beamed"></i>
+                        </div>
+
+                        <div class="flex flex-col gap-4">
+                            <h3 class="text-2xl max-md:text-xl">
+                                Music generator
+                            </h3>
+                            <p class="text-gray-800 dark:text-gray-100 max-md:text-sm">
+                                Access our AI music generation tools create original compositions 
+                                from input parameters, enabling effortless music creation for various needs.
+                            </p>
+
+                            <div class="mt-auto flex gap-2 underline underline-offset-4">
+                                <span>Learn more</span>
+                                <i class="bi bi-arrow-up-right group-hover/card:-translate-y-1 group-hover/card:translate-x-1 duration-300 transition-transform"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="reveal-up h-[240px] w-[450px] max-md:w-full">
+                    <a href="#"
+                        class="flex w-full h-full gap-8 rounded-xl hover:shadow-lg dark:shadow-[#171717] duration-300 transition-all p-8 group/card">
+                        <div class="text-4xl max-md:text-2xl">
+                            <i class="bi bi-camera-video-fill"></i>
+                        </div>
+
+                        <div class="flex flex-col gap-4">
+                            <h3 class="text-2xl max-md:text-xl">
+                                Video generator
+                            </h3>
+                            <p class="text-gray-800 dark:text-gray-100 max-md:text-sm">
+                                Use our AI video generation tools create videos from text or templates, streamlining content creation and production.
+                            </p>
+
+                            <div class="mt-auto flex gap-2 underline underline-offset-4">
+                                <span>Learn more</span>
+                                <i class="bi bi-arrow-up-right group-hover/card:-translate-y-1 group-hover/card:translate-x-1 duration-300 transition-transform"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>            
+        </div>
+    </section>
+
+
+    <section class="relative flex w-full min-h-[110vh] max-md:min-h-[80vh] flex-col place-content-center place-items-center overflow-hidden">
+        <div class="w-full max-lg:max-w-full place-content-center items-center flex flex-col max-w-[80%] gap-4 p-4">
         
-    </body>
+            <h3 class="reveal-up text-5xl font-medium max-md:text-3xl text-center leading-normal">
+                Additional Features
+            </h3>
+            <!-- <p class="reveal-up mt-3 max-w-[600px] text-center ">
+            </p> -->
+            
+            <div class="mt-8 relative gap-10 p-4 grid place-items-center grid-cols-3 max-lg:flex max-lg:flex-col">
+
+
+                <div class="reveal-up  w-[350px] border-[1px] h-[400px] rounded-md place-items-center p-4 bg-[#f2f3f4] max-md:w-[320px] dark:bg-[#141414] dark:border-[#1f2123] flex flex-col gap-3">
+
+                    <div class="w-full h-[250px] p-4 rounded-xl backdrop-blur-2xl overflow-hidden flex place-content-center">
+                        <img src="{% static 'assets/images/home/prompts2.png' %}" alt="Prompt library" class="w-auto h-full object-contain">
+                    </div>
+                    <h3 class="text-2xl">
+                        Prompt Library
+                    </h3>
+                    <p class="text-gray-700 dark:text-gray-300 px-4 text-center text-sm">
+                        Forget about writing your own prompt, use the prompt templates and supercharge your
+                        workflow.
+                    </p>
+                </div>
+                
+                <div class="reveal-up w-[350px] max-md:w-[320px] border-[1px] h-[400px] rounded-md place-items-center p-4 bg-[#f2f3f4] dark:bg-[#141414] dark:border-[#1f2123] flex flex-col gap-3">
+
+                    <div class="w-full h-[250px] p-4 rounded-xl backdrop-blur-2xl overflow-hidden flex place-content-center">
+                        <img src="{% static 'assets/images/home/search.png' %}" alt="Web search" class="w-auto h-full object-contain">
+                    </div>
+                    <h3 class="text-2xl">
+                        Real-time web search
+                    </h3>
+                    <p class="text-gray-700 dark:text-gray-300 px-4 text-center text-sm">
+                        Our Real-time web search AI Bot provides instant, live search results directly within the AI chat playground.
+                    </p>
+                </div>
+
+                <div class="reveal-up w-[350px] max-md:w-[320px] border-[1px] h-[400px] rounded-lg place-items-center p-4 bg-[#f2f3f4] dark:bg-[#141414] dark:border-[#1f2123] flex flex-col gap-3">
+
+                    <div class="w-full h-[250px] p-4 rounded-xl backdrop-blur-2xl overflow-hidden flex place-content-center">
+                        <img src="{% static 'assets/images/home/image.png' %}" alt="Image generation" class="w-auto h-full object-contain">
+                    </div>
+                    <h3 class="text-2xl">
+                        Image Generation
+                    </h3>
+                    <p class="text-gray-700 dark:text-gray-300 px-4 text-center text-sm">
+                        Generate Image instantly from multiple models, create visuals from text descriptions or templates.
+                    </p>
+                </div>
+
+                <div class="reveal-up w-[350px] max-md:w-[320px] border-[1px] h-[400px] rounded-lg place-items-center p-4 bg-[#f2f3f4] dark:bg-[#141414] dark:border-[#1f2123] flex flex-col gap-3">
+
+                    <div class="w-full h-[250px] p-4 rounded-xl backdrop-blur-2xl overflow-hidden flex place-content-center">
+                        <img src="{% static 'assets/images/home/history.png' %}" alt="History" class="w-auto h-full object-contain">
+                    </div>
+                    <h3 class="text-2xl">
+                        History
+                    </h3>
+                    <p class="text-gray-700 dark:text-gray-300 px-4 text-center text-sm">
+                        All of the models can recall previous topic, so you 
+                        can continue your conversation at any point of time. 
+                    </p>
+                </div>
+
+                <div class="reveal-up w-[350px] max-md:w-[320px] border-[1px] h-[400px] rounded-lg place-items-center p-4
+                                bg-[#f2f3f4] dark:bg-[#141414] dark:border-[#1f2123] flex flex-col gap-3">
+
+                    <div class="w-full h-[250px]
+                                p-4
+                                rounded-xl 
+                                    backdrop-blur-2xl
+                                    overflow-hidden flex place-content-center">
+                        <img src="{% static 'assets/images/home/import.png' %}" 
+                                alt="Import content" class="w-auto h-full object-contain">
+                    </div>
+                    <h3 class="text-2xl">
+                        Import content
+                    </h3>
+                    <p class="text-gray-700 dark:text-gray-300 px-4 text-center text-sm">
+                        Effortlessly import PDFs, images, and documents. Use AI to ask questions, extract information, and summarize documents.
+                    </p>
+                </div>
+
+                <div class="reveal-up w-[350px] max-md:w-[320px] border-[1px] h-[400px] rounded-lg place-items-center p-4 bg-[#f2f3f4] dark:bg-[#141414] dark:border-[#1f2123] flex flex-col gap-3">
+
+                    <div class="w-full h-[250px] p-4 rounded-xl backdrop-blur-2xl overflow-hidden flex place-content-center">
+                        <img src="{% static 'assets/images/home/multilingual.png' %}" alt="Multilingual" class="w-auto h-full object-contain">
+                    </div>
+                    <h3 class="text-2xl">
+                        Multilingual support
+                    </h3>
+                    <p class="text-gray-700 dark:text-gray-300 px-4 text-center text-sm">
+                        ChatGPT, and Gemini can understand and respond in over 100 languages.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="relative flex  w-full min-h-[100vh] max-md:min-h-[80vh] flex-col place-content-center place-items-center overflow-hidden">
+        <div class="w-full max-lg:max-w-full place-content-center place-items-center flex flex-col max-w-[80%] gap-4 p-4">
+            
+            <h3 class="reveal-up text-5xl font-medium max-md:text-3xl text-center leading-normal">
+                One Subscription for it all
+            </h3>
+            <p class="reveal-up mt-3 max-w-[600px] text-center ">
+                Why pay for multiple expensive subscriptions when one subscription can do it all?
+                Access multiple AI models and save 1000's of dollar per year. 
+            </p>
+            
+            <div class="mt-8 relative flex max-lg:flex-col gap-5">
+
+                <div class="reveal-up flex w-full max-w-[650px] max-md:max-w-full flex-col place-items-center gap-2 rounded-lg border-[1px] border-outlineColor bg-white dark:bg-[#080808] dark:border-[#1f2123] p-2 shadow-xl max-lg:w-[320px]">
+                    <img src="{% static 'assets/images/home/multi-sub.png' %}" alt="Multi sub">
+                </div>
+
+                    <div class="reveal-up flex w-full max-w-[650px] flex-col place-items-center gap-2 rounded-lg border-[1px] border-outlineColor bg-white dark:bg-[#080808] dark:border-[#1f2123] p-2 shadow-xl max-lg:w-[320px]">
+                    <img src="{% static 'assets/images/home/single-sub.jpg' %}" alt="Single sub">
+                </div>
+
+            </div>
+
+            <a href="#" class="reveal-up group shadow-xl btn flex gap-2 mt-10">
+                <span>Start Chat</span>
+                <i class="bi bi-arrow-right duration-300 group-hover:translate-x-1"></i>
+            </a>
+
+        </div>
+    </section>
+
+    <section class="flex min-h-[100vh] w-full flex-col place-content-center place-items-center p-[2%]">
+        <h3 class="reveal-up text-4xl font-medium text-center max-md:text-2xl">
+            Join the professionals using Pixa
+        </h3>
+        <!-- Testimonials -->
+        <div class="mt-20 gap-10 space-y-8  max-md:columns-1 lg:columns-2 xl:columns-3">
+            <div class="reveal-up flex h-fit w-[350px] break-inside-avoid flex-col gap-4 rounded-lg border-[1px] bg-[#f6f7fb] dark:bg-[#080808] dark:border-[#1f2123] p-4 max-lg:w-[320px]">   
+
+                <div class="flex place-items-center gap-3">
+                    <div class="h-[50px] w-[50px] overflow-hidden rounded-full">
+                        <img
+                            src="{% static 'assets/images/people/man2.jpg' %}"
+                            class="h-full w-full object-cover"
+                            alt="man"
+                        />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <div class="font-semibold">Mante</div>
+                        <div class="text-gray-700 dark:text-gray-300">Glu, cto</div>
+                    </div>
+                </div>
+
+                <p class="mt-4 text-gray-800 dark:text-gray-200">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing
+                    elit. Beatae, vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolore deleniti iusto Numquam!
+                </p>
+            </div>
+
+                <div class="reveal-up flex h-fit w-[350px] break-inside-avoid flex-col gap-4 rounded-lg border-[1px] bg-[#f6f7fb] dark:bg-[#080808] dark:border-[#1f2123] p-4 max-lg:w-[320px]">   
+
+                <div class="flex place-items-center gap-3">
+                    <div class="h-[50px] w-[50px] overflow-hidden rounded-full">
+                        <img
+                            src="{% static 'assets/images/people/women.jpg' %}"
+                            class="h-full w-full object-cover"
+                            alt="women"
+                        />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <div class="font-semibold">Trich B</div>
+                        <div class="text-gray-700 dark:text-gray-300">AMI, ceo</div>
+                    </div>
+                </div>
+
+                <p class="mt-4 text-gray-800 dark:text-gray-200">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing
+                    elit. Beatae, vero. Lorem ipsum dolor sit amet.
+                </p>
+            </div>
+
+                <div class="reveal-up flex h-fit w-[350px] break-inside-avoid flex-col gap-4 rounded-lg border-[1px]  bg-[#f6f7fb] dark:bg-[#080808] dark:border-[#1f2123] p-4 max-lg:w-[320px]">   
+
+                <div class="flex place-items-center gap-3">
+                    <div class="h-[50px] w-[50px] overflow-hidden rounded-full">
+                        <img
+                            src="{% static 'assets/images/people/man.jpg' %}"
+                            class="h-full w-full object-cover"
+                            alt="man"
+                        />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <div class="font-semibold">John B</div>
+                        <div class="text-gray-700 dark:text-gray-300">Benz, ceo</div>
+                    </div>
+                </div>
+
+                <p class="mt-4 text-gray-800 dark:text-gray-200">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, expedita nihil repellendus accusamus itaque facere labore, suscipit tempore in harum repellat. Doloribus, dolor facere dolorem impedit facilis rerum beatae exercitationem aliquid porro ea architecto similique illo omnis odio consequatur modi.
+                </p>
+            </div>
+
+                <div class="reveal-up flex h-fit w-[350px] break-inside-avoid flex-col gap-4 rounded-lg border-[1px]  bg-[#f6f7fb] dark:bg-[#080808] dark:border-[#1f2123] p-4 max-lg:w-[320px]">   
+
+                <div class="flex place-items-center gap-3">
+                    <div class="h-[50px] w-[50px] overflow-hidden rounded-full">
+                        <img
+                            src="{% static 'assets/images/people/man2.jpg' %}"
+                            class="h-full w-full object-cover"
+                            alt="man"
+                        />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <div class="font-semibold">Ben Alfert B</div>
+                        <div class="text-gray-700 dark:text-gray-300">XZ tech, cto</div>
+                    </div>
+                </div>
+
+                <p class="mt-4 text-gray-800 dark:text-gray-200">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing
+                    elit. Beatae, vero.
+                </p>
+            </div>
+
+                <div class="reveal-up flex h-fit w-[350px] break-inside-avoid 
+                    flex-col gap-4 rounded-lg border-[1px] 
+                    bg-[#f6f7fb] dark:bg-[#080808] dark:border-[#1f2123] p-4 max-lg:w-[320px]">   
+
+                <div class="flex place-items-center gap-3">
+                    <div
+                        class="h-[50px] w-[50px] overflow-hidden rounded-full">
+                        <img
+                            src="{% static 'assets/images/people/women.jpg' %}"
+                            class="h-full w-full object-cover"
+                            alt="women"
+                        />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <div class="font-semibold">Rachel</div>
+                        <div class="text-gray-700 dark:text-gray-300">Gem, cto</div>
+                    </div>
+                </div>
+
+                <p class="mt-4 text-gray-800 dark:text-gray-200">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing
+                    elit. Beatae, vero. Lorem, ipsum dolor.
+                </p>
+            </div>
+
+                <div class="reveal-up flex h-fit w-[350px] break-inside-avoid 
+                    flex-col gap-4 rounded-lg border-[1px] 
+                    bg-[#f6f7fb] dark:bg-[#080808] dark:border-[#1f2123] p-4 max-lg:w-[320px]">   
+
+                <div class="flex place-items-center gap-3">
+                    <div class="h-[50px] w-[50px] overflow-hidden rounded-full">
+                        <img
+                            src="{% static 'assets/images/people/man.jpg' %}"
+                            class="h-full w-full object-cover"
+                            alt="man"
+                        />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <div class="font-semibold">Jamie</div>
+                        <div class="text-gray-700 dark:text-gray-300">SnapFist.ai, ceo</div>
+                    </div>
+                </div>
+
+                <p class="mt-4 text-gray-800 dark:text-gray-200">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, nihil vitae fuga ab reiciendis optio et corporis dolorem alias deserunt, molestias in iusto! Ratione, quisquam incidunt. Reprehenderit ipsam officiis enim.
+                </p>
+            </div>
+            
+        </div>
+    </section>
+
+
+    <section class="mt-5 flex w-full flex-col gap-6 place-items-center p-[2%]" id="pricing">
+        <h3 class="reveal-up text-5xl font-medium max-md:text-2xl">
+            Choose the right plan for you
+        </h3>
+        <!-- pricing -->
+        <div class="mt-10 flex flex-wrap place-content-center gap-8 max-lg:flex-col" >
+            <div class="reveal-up flex w-[350px] flex-col place-items-center gap-2 rounded-lg border-[1px] border-outlineColor bg-white dark:bg-[#080808] dark:border-[#1f2123] p-8 shadow-xl max-lg:w-[320px]">
+                <h3 class="">
+                    <span class="text-5xl max-md:text-3xl font-semibold">$9</span>
+                    <span class="text-2xl text-gray-600 dark:text-gray-300">/mo</span>
+                </h3>
+                <p class="mt-3 text-center text-gray-800 dark:text-gray-100">
+                    Essential AI tools for everyday use
+                </p>
+                <hr />
+                <ul class="mt-4 flex flex-col gap-4 text-base text-gray-800 dark:text-gray-200">
+                    <li class="flex gap-2">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>1,000 AI powered chat messages</span>    
+                    </li>
+                    <li class="flex gap-2">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>30 premium image generations</span>    
+                    </li>
+                    <li class="flex gap-2">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>10 premium  music generation</span>    
+                    </li>
+
+                    <li class="flex gap-2 ">
+                        <i class="bi bi-check-circle-fill text-gray-400 dark:text-gray-500"></i>
+                        <span>Access to all premium AI models</span>    
+                    </li>
+
+                    <li class="flex gap-2 ">
+                        <i class="bi bi-check-circle-fill text-gray-400 dark:text-gray-500"></i>
+                        <span>Early access to new features</span>    
+                    </li>
+                
+                </ul>
+                <a href="#"
+                    class="btn mt-auto !w-full transition-transform duration-[0.3s]  hover:scale-x-[1.02] !text-black !bg-transparent !border-[1px] border-black dark:border-white dark:!text-white">
+                    Choose plan
+                </a>
+            </div>
+            
+            <div class="reveal-up flex w-[350px] flex-col place-items-center gap-2 rounded-lg border-2 border-outlineColor bg-white dark:bg-[#080808] dark:border-[#595858] p-8 shadow-xl max-lg:w-[320px]">
+                <h3 class="">
+                    <span class="text-5xl max-md:text-3xl  font-semibold">$17</span>
+                    <span class="text-2xl max-md:text-xl  text-gray-600 dark:text-gray-300">/mo</span>
+                </h3>
+                <p class="mt-3 text-center text-gray-800 dark:text-gray-200">
+                    Advanced features for serious AI enthusiasts.
+                </p>
+                <hr />
+                <ul class="mt-4 flex flex-col gap-4  text-base text-gray-800 dark:text-gray-100">
+                    <li class="flex gap-2">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>5,000 AI powered chat messages</span>    
+                    </li>
+                    <li class="flex gap-2">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>100 premium image generations</span>    
+                    </li>
+                    <li class="flex gap-2">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>40 premium music generation</span>    
+                    </li>
+
+                    <li class="flex gap-2 ">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Access to all premium AI models</span>    
+                    </li>
+
+                    <li class="flex gap-2 ">
+                        <i class="bi bi-check-circle-fill text-gray-400 dark:text-gray-500"></i>
+                        <span>Early access to new features</span>    
+                    </li>
+                
+                </ul>
+                <a href="#" class="btn mt-auto !w-full transition-transform duration-[0.3s] hover:scale-x-[1.02]">
+                    Choose plan
+                </a>
+            </div>
+
+            <div class="reveal-up flex w-[350px] flex-col place-items-center gap-2 rounded-lg border-[1px] border-outlineColor dark:bg-[#080808] dark:border-[#1f2123] bg-white p-8 shadow-xl max-lg:w-[320px]">
+                <h3 class="">
+                    <span class="text-5xl max-md:text-3xl font-semibold">$29</span>
+                    <span class="text-2xl text-gray-600 dark:text-gray-300">/mo</span>
+                </h3>
+                <p class="mt-3 text-center text-gray-800 dark:text-gray-100">
+                    Unlimited potential for power users
+                </p>
+                <hr />
+                <ul class="mt-4 flex flex-col gap-4 text-base text-gray-800 dark:text-gray-200">
+                    <li class="flex gap-2">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>10,000 AI powered chat messages</span>    
+                    </li>
+                    <li class="flex gap-2">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>300 premium image generations</span>    
+                    </li>
+                    <li class="flex gap-2">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>100 premium music generations</span>    
+                    </li>
+
+                    <li class="flex gap-2 ">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Access to all premium AI models</span>    
+                    </li>
+
+                    <li class="flex gap-2 ">
+                        <i class="bi bi-check-circle-fill "></i>
+                        <span>Early access to new features</span>    
+                    </li>
+                
+                </ul>
+                <a href="#" class="btn mt-8 !w-full transition-transform duration-[0.3s] hover:scale-x-[1.02] !text-black !bg-transparent !border-[1px] border-black dark:border-white dark:!text-white">
+                    Choose plan
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="mt-5 flex min-h-[80vh] w-full flex-col place-content-center place-items-center p-[2%] max-lg:p-3">
+        <h3 class="reveal-up text-4xl font-medium max-md:text-2xl">
+            Read resources by experts ✨
+        </h3>
+        <!-- articles -->
+    
+        <div class="reveal-up mt-10 flex flex-wrap place-content-center gap-10 max-lg:flex-col">
+            <a href="#" class="flex h-[500px] w-[400px] flex-col gap-2 overflow-clip rounded-lg p-4 max-lg:w-[350px]">
+                <div class="h-[350px] min-h-[350px] w-full overflow-hidden rounded-2xl">
+                    <img
+                        src="{% static 'assets/images/home/article1.png' %}"
+                        alt="article image"
+                        class="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.3]"
+                        srcset=""
+                    />
+                </div>
+
+                <div class="text-gray-600 dark:text-gray-300 justify-between flex gap-2">
+                    <div class="text-gray-800 dark:text-gray-200">
+                        Machine learning
+                    </div>
+                    <div class="text-gray-600 dark:text-gray-400">
+                        Jul, 17, 2024
+                    </div>
+                </div>
+                <h3 class="mt-1 font-medium text-xl max-md:text-xl">
+                    Latest AI tools
+                </h3>
+                
+            </a>
+            
+            <a href="#" class="flex h-[500px] w-[400px] flex-col gap-2 overflow-clip rounded-lg p-4 max-lg:w-[350px]">
+                <div class="h-[350px] min-h-[350px] w-full overflow-hidden rounded-2xl">
+                    <img
+                        src="{% static 'assets/images/home/article2.jpg' %}"
+                        alt="article image"
+                        class="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.3]"
+                        srcset=""
+                    />
+                </div>
+
+                <div class="text-gray-600 dark:text-gray-300 justify-between flex gap-2">
+                    <div class="text-gray-800 dark:text-gray-200">
+                        Announcement
+                    </div>
+                    <div class="text-gray-600 dark:text-gray-400">
+                        June, 22, 2024
+                    </div>
+                </div>
+                <h3 class="mt-1 font-medium text-xl max-md:text-xl">
+                    Pixa Unveils new technology
+                </h3>
+                
+            </a>
+
+            <a href="#" class="flex h-[500px] w-[400px] flex-col gap-2 overflow-clip rounded-lg p-4 max-lg:w-[350px]">
+                <div class="h-[350px] min-h-[350px] w-full overflow-hidden rounded-2xl">
+                    <img
+                        src="{% static 'assets/images/home/article3.png' %}"
+                        alt="article image"
+                        class="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.3]"
+                        srcset=""
+                    />
+                </div>
+
+                <div class="text-gray-600 dark:text-gray-300 justify-between flex gap-2">
+                    <div class="text-gray-800 dark:text-gray-200">
+                        Announcement
+                    </div>
+                    <div class="text-gray-600 dark:text-gray-400">
+                        Apr, 27, 2024
+                    </div>
+                </div>
+                <h3 class="mt-1 font-medium text-xl max-md:text-xl">
+                    Launching Pixa playground
+                </h3>
+                
+            </a>
+
+        </div>
+    </section>
+
+    <section class="relative flex w-full flex-col place-content-center place-items-center gap-[10%] p-[5%] px-[10%]">
+
+        <h3 class="text-4xl font-medium max-md:text-2xl">
+            FAQ
+        </h3>
+        <div class="mt-5 flex min-h-[300px] w-full max-w-[850px] flex-col gap-4">
+            <div class="faq w-full">
+                <h4 class="faq-accordion flex w-full select-none text-xl max-md:text-lg">
+                    <span>What's Pixa playground?</span>
+                    <i class="bi bi-plus text-xl origin-center duration-300 transition-transform 
+                                ml-auto font-semibold"></i>
+                </h4>
+                <div class="content max-lg:text-sm">
+                    Pixa's playground is an integrated webapp to seamlessly test different LLM models such as GPT4, Claude,
+                    Gemini, etc.
+                </div>
+            </div>
+            <hr>
+            <div class="faq w-full">
+                <h4 class="faq-accordion flex w-full select-none text-xl max-md:text-lg">
+                    <span>What are LLM?</span>
+                    <i class="bi bi-plus text-xl origin-center duration-300 transition-transform 
+                                ml-auto font-semibold"></i>
+                </h4>
+                <div class="content max-lg:text-sm">
+                    LLM stands for "Large Language Model." It's a type of artificial intelligence model trained on vast amounts of text data to understand and generate human-like text. These models, like GPT-4, can perform various tasks, such as answering questions, generating content, translating languages, and more, by leveraging patterns learned from the data they were trained on.
+                </div>
+            </div>
+            <hr>
+            <div class="faq w-full">
+                <h4 class="faq-accordion flex w-full select-none text-xl max-md:text-lg">
+                    <span>Where can I test different AI models?</span>
+                    <i class="bi bi-plus text-xl origin-center duration-300 transition-transform ml-auto font-semibold"></i>
+                </h4>
+                <div class="content max-lg:text-sm">
+                    You can use Pixa's AI Playground to test different models, including
+                    GPT4, Claude, Perplexity and more. 
+                </div>
+            </div>
+            <hr>
+
+            <div class="faq w-full">
+                <h4 class="faq-accordion flex w-full select-none text-xl max-md:text-lg">
+                    <span>Is Pixa Free to use?</span>
+                    <i class="bi bi-plus text-xl origin-center duration-300 transition-transform 
+                                ml-auto font-semibold"></i>
+                </h4>
+                <div class="content max-lg:text-sm">
+                    You can start using Pixa for free, and later upgrade your plan to access all its features.
+                </div>
+            </div>
+            <hr>
+            
+        </div>
+        <div class="purple-bg-grad max-md:hidden reveal-up absolute bottom-14 right-[20%] h-[150px] w-[150px] rounded-full"></div>
+        
+    </section>
+
+    <section class="relative flex p-2  w-full min-h-[60vh]  flex-col place-content-center place-items-center overflow-hidden">   
+            <div class="reveal-up w-full h-full min-h-[450px] max-lg:max-w-full rounded-md lg:py-[5%] bg-[#f6f7fb] dark:bg-[#171717] place-content-center items-center flex flex-col max-w-[80%] gap-4 p-4">
+            
+            <h3 class="reveal-up text-5xl font-medium max-md:text-3xl text-center leading-normal">
+                Access and compare multiple AI models 
+            </h3>
+            
+            <div class="mt-8 relative flex max-lg:flex-col gap-5">
+
+                <a href="#" class="btn  reveal-up !rounded-full !p-4 font-medium">
+                    Launch Playground
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="flex w-full flex-col place-content-center place-items-center gap-[10%] p-[5%] px-[10%] max-md:px-2">
+        <div class="flex w-full max-w-[80%] place-content-center place-items-center justify-between gap-3 rounded-lg bg-[#F6F7FB] dark:bg-[#171717] p-6 max-md:max-w-full max-md:flex-col">
+            <div class="flex flex-col max-lg:text-center gap-1">
+                <h2 class="text-2xl text-gray-800 dark:text-gray-200 max-md:text-xl">
+                    Join our newsletter
+                </h2>
+                <div class="text-gray-700 dark:text-gray-300">Get product insights and updates.</div>
+            </div>
+
+            <div class="flex h-[60px] place-items-center gap-2 overflow-hidden p-2">
+                <input
+                    type="email"
+                    class="input h-full w-full !border-gray-600 p-2 outline-none"
+                    placeholder="email"
+                />
+                <a class="btn !rounded-full !border-[1px] !text-black !border-solid !border-black  dark:!text-white dark:!border-gray-300 !bg-transparent transition-colors duration-[0.3s]" href="">
+                    Signup
+                </a>
+            </div>
+        </div>
+    </section>
+
 
 {% endblock content %}
     
