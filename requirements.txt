@@ -1,0 +1,14 @@
+Django==4.2.19
+django-compressor==4.5.1
+django-tailwind==3.8.0
+python-decouple==3.8
+requests==2.32.3
+gunicorn
+whitenoise
+dj-database-url
+psycopg[binary]
+django-crispy-forms
+psycopg2==2.9.9
+crispy-tailwind
+django-summernote
+django-htmx
