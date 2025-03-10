@@ -6,8 +6,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>All your AI models in one place - Try Pixa Playground</title>
-        <meta name="description" content="Get all your AI models and tools in one place" />
+        <title>All your AI Solutions in one place - BotsNBytes</title>
+        <meta name="description" content="Get all your AI solutions and tools" />
         <link
             rel="shortcut icon"
             href="{% static 'assets/logo/logo.png' %}"
@@ -15,11 +15,13 @@
         />
 
         <!-- Open Graph / Facebook -->
-        <meta property="og:title" content="All your AI models in one place - Try Pixa Playground" />
-        <meta property="og:description" content="Get all your AI models and tools in one place" />
+        <meta property="og:title" content="All your AI solutions in one place - Try BotsNBytes" />
+        <meta property="og:description" content="Get all your AI solutions and tools in one place" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://github.com/PaulleDemon" />
+        <meta property="og:url" content="https://botsnbytes.com" />
         <meta property="og:image" content="" />
+
+        {% include 'base/css.html' %}
 
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-"></script>
@@ -30,7 +32,6 @@
 
             gtag('config', 'G-');
         </script>
-        {% include 'base/css.html' %}
         {% include 'base/navbar.html' %}
 
     </head>
@@ -42,6 +43,6 @@
         {% include 'base/footer.html' %}
     </body>
 
-        {% include 'base/js.html' %}
+    {% include 'base/js.html' %}
 
 </html>

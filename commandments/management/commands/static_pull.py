@@ -15,6 +15,7 @@ VENDOR_STATICFILES = {
 
 
     "typed.min.js": "https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js",
+    "typed.min.js.map": "https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js.map",
 
     "bootstrap-icons.min.css": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css",
     "fonts/bootstrap-icons.woff": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff",
