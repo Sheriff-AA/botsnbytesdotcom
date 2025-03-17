@@ -1,8 +1,7 @@
 {% load static %}
 
+<header class="lg:px-4 max-w-[100vw] max-w-lg:mr-auto max-lg:top-0 fixed top-4 lg:left-1/2 lg:-translate-x-1/2 z-20 flex h-[60px] w-full text-gray-700 bg-white dark:text-gray-200 dark:bg-[#17181b] px-[3%] rounded-md lg:max-w-5xl shadow-md dark:shadow-gray-700 lg:justify-around lg:!backdrop-blur-lg lg:opacity-[0.99]">
 
-<header class="lg:px-4 max-w-[100vw] max-w-lg:mr-auto max-lg:top-0 fixed top-4 lg:left-1/2 lg:-translate-x-1/2 z-20 flex h-[60px] w-full text-gray-700 bg-white dark:text-gray-200 dark:bg-[#17181b] px-[3%] rounded-md lg:max-w-5xl shadow-md dark:shadow-gray-700
-lg:justify-around lg:!backdrop-blur-lg lg:opacity-[0.99]">
     <a class="flex p-[4px] gap-2 place-items-center" href="#">
         <div class="h-[30px] max-w-[100px]">
             <img
@@ -13,13 +12,14 @@ lg:justify-around lg:!backdrop-blur-lg lg:opacity-[0.99]">
         </div>
         <span class="uppercase text-base font-medium">BotsNBytes</span>
     </a>
+
     <div class="collapsible-header animated-collapse max-lg:shadow-md" id="collapsed-header-items">
         <nav class="relative flex h-full max-lg:h-max w-max gap-5 text-base max-lg:mt-[30px] max-lg:flex-col max-lg:gap-5 lg:mx-auto place-items-center">
-            <a class="header-links" href="#"> API </a>
+            <a class="header-links" href="#"> Home </a>
             <a class="header-links" href="#"> Blog </a>
             <a class="header-links" href="#"> Solutions </a>
             
-            <div class="relative flex flex-col place-items-center">
+            {% comment %} <div class="relative flex flex-col place-items-center">
                 <div id="nav-dropdown-toggle-0" class="max-lg:max-w-fit flex header-links gap-1  place-items-center">
                     <span class=""> Features </span>
                     <i class="text-sm bi bi-chevron-down"></i>
@@ -99,7 +99,7 @@ lg:justify-around lg:!backdrop-blur-lg lg:opacity-[0.99]">
                         </a>
                     </div>           
                 </nav>
-            </div>
+            </div> {% endcomment %}
             <a class="header-links" href="#pricing"> Pricing </a>
             
         </nav>
@@ -114,11 +114,12 @@ lg:justify-around lg:!backdrop-blur-lg lg:opacity-[0.99]">
                 class="btn flex gap-3 px-3 py-2 transition-transform 
                             duration-[0.3s] hover:translate-x-2"
             >
-                <span>Try playground</span>
+                <span>Schedule Call</span>
                 <i class="bi bi-arrow-right"></i>
             </a>
         </div>
     </div>
+
     <button class="bi bi-list absolute right-3 top-3 z-50 text-3xl text-gray-500 lg:hidden" onclick="toggleHeader()" aria-label="menu" id="collapse-btn"
     ></button>
 </header>
