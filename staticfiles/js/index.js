@@ -208,9 +208,9 @@ function closeVideo(){
 
 const typed = new Typed('#prompts-sample', {
     strings: ["How to solve a rubik's cube? Step by step guide", 
-                "What's Pixa playground?", 
+                "What are AI agents?", 
                 "How to build an AI SaaS App?", 
-                "How to integrate Pixa API?"],
+                "Should I use AI in my business?"],
     typeSpeed: 80,
     smartBackspace: true, 
     loop: true,
