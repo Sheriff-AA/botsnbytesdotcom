@@ -22,9 +22,10 @@ function onHeaderClickOutside(e) {
 
 function toggleHeader() {
     if (isHeaderCollapsed) {
-        // collapseHeaderItems.classList.remove("max-md:opacity-0")
         collapseHeaderItems.classList.add("max-lg:!opacity-100", "min-h-[90vh]")
+        collapseHeaderItems.style.opacity = "1";
         collapseHeaderItems.style.height = "90vh"
+        // collapseHeaderItems.style.display = "block"; 
         collapseBtn.classList.remove("bi-list")
         collapseBtn.classList.add("bi-x", "max-lg:fixed")
         isHeaderCollapsed = false
@@ -35,7 +36,10 @@ function toggleHeader() {
 
     } else {
         collapseHeaderItems.classList.remove("max-lg:!opacity-100", "min-h-[90vh]")
+        collapseHeaderItems.style.opacity = "0";
         collapseHeaderItems.style.height = "0vh"
+        collapseHeaderItems.style.display = "none";
+        collapseHeaderItems.removeAttribute("style");
         
         collapseBtn.classList.remove("bi-x", "max-lg:fixed")  
         
@@ -46,8 +50,10 @@ function toggleHeader() {
         window.removeEventListener("click", onHeaderClickOutside)
 
     }
+    console.log(collapseHeaderItems.style.opacity, collapseHeaderItems.style.display)
 }
 
+// console.log(navToggle);
 function responsive() {
     if (!isHeaderCollapsed){
         toggleHeader()
@@ -153,8 +159,7 @@ function navMouseLeave(){
 
 function openNavDropdown(event){
 
-    navDropdown.classList.add("opacity-100", "scale-100", 
-                            "max-lg:min-h-[450px]", "max-lg:!h-fit", "min-w-[320px]")
+    navDropdown.classList.add("opacity-100", "scale-100", "max-lg:min-h-[450px]", "max-lg:!h-fit", "min-w-[320px]")
     
     navDropdown.setAttribute("data-open", true)
 

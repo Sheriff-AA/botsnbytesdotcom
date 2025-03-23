@@ -712,6 +712,10 @@ video {
   margin-top: 2rem !important;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .ml-auto {
   margin-left: auto;
 }
@@ -1091,6 +1095,10 @@ video {
           user-select: none;
 }
 
+.list-disc {
+  list-style-type: disc;
+}
+
 .break-inside-avoid {
   -moz-column-break-inside: avoid;
        break-inside: avoid;
@@ -1461,6 +1469,10 @@ video {
   padding-bottom: 2.5rem;
 }
 
+.ps-5 {
+  padding-inline-start: 1.25rem;
+}
+
 .pt-\[5\%\] {
   padding-top: 5%;
 }
@@ -1646,6 +1658,10 @@ video {
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.outline {
+  outline-style: solid;
 }
 
 .grayscale {
