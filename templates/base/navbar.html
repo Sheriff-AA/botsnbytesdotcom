@@ -15,9 +15,9 @@
 
     <div class="collapsible-header animated-collapse max-lg:shadow-md" id="collapsed-header-items">
         <nav class="relative flex h-full max-lg:h-max w-max gap-5 text-base max-lg:mt-[30px] max-lg:flex-col max-lg:gap-5 lg:mx-auto place-items-center">
-            <a class="header-links" href="#"> Home </a>
-            <a class="header-links" href="#"> Blog </a>
-            <a class="header-links" href="#"> Solutions </a>
+            <a class="header-links" href="{% url 'home-page' %}"> Home </a>
+            <a class="header-links" href="{% url 'home-page' %}#about"> About </a>
+            <a class="header-links" href="{% url 'pages:article-list' %}"> Solutions </a>
             
             <div class="hidden relative flex flex-col place-items-center">
                 <div id="nav-dropdown-toggle-0" class="max-lg:max-w-fit flex header-links gap-1 place-items-center">
@@ -105,7 +105,7 @@
                 <i class="bi bi-sun" id="toggle-mode-icon"></i>
             </button>
             <a
-                href="#"
+                href="{% url 'contact-page' %}"
                 aria-label="Try Pixa Playground"
                 class="btn flex gap-3 px-3 py-2 transition-transform duration-[0.3s] hover:translate-x-2">
                 <span>Schedule Call</span>

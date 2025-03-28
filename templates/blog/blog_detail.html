@@ -1,0 +1,18 @@
+<!-- filepath: templates/base/blog_detail.html -->
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="relative flex flex-col items-center justify-center min-h-[100vh] p-8">
+    <article class="w-full max-w-[800px] bg-white dark:bg-[#171717] p-6 rounded-lg shadow-lg">
+        <h1 class="text-4xl font-medium">{{ blog.title }}</h1>
+        <p class="mt-2 text-sm text-gray-500">{{ blog.published_date }}</p>
+        <div class="mt-6">
+            <img src="{{ blog.image.url }}" alt="{{ blog.title }}" class="w-full h-auto rounded-md">
+        </div>
+        <div class="mt-6 text-gray-800 dark:text-gray-300">
+            {{ blog.content|safe }}
+        </div>
+    </article>
+</section>
+{% endblock %}
