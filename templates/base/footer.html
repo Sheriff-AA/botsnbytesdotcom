@@ -34,8 +34,8 @@
             <div class="flex h-full w-[200px] flex-col gap-4">
                 <h2 class="text-xl">Resources</h2>
                 <div class="flex flex-col gap-3">
-                    <a href="#" class="footer-link">Getting started</a>
-                    <a href="#" class="footer-link">Case Studies</a>
+                    <a href="{% url 'contact-page' %}" class="footer-link">Getting started</a>
+                    <a href="{% url 'pages:article-list' %}" class="footer-link">Case Studies</a>
                 </div>
             </div>
 
@@ -43,8 +43,8 @@
             <div class="flex h-full w-[200px] flex-col gap-4">
                 <h2 class="text-xl">Company</h2>
                 <div class="flex flex-col gap-3">
-                    <a href="#" class="footer-link">Support channels</a>
-                    <a href="#" class="footer-link">Systems</a>
+                    <a href="{% url 'contact-page' %}" class="footer-link">Support channels</a>
+                    <a href="{% url 'pages:article-list' %}" class="footer-link">Systems</a>
                     <a href="#" class="footer-link">Blog</a>
                 </div>
             </div>
