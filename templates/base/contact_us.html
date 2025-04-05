@@ -38,31 +38,33 @@
     <p class="mt-4 text-center text-gray-700 dark:text-gray-300 max-md:text-sm">
         We'd love to hear from you! Fill out the form below, and we'll get back to you as soon as possible.
     </p>
-    <form action="#" method="POST" class="mt-8 w-full max-w-[600px] bg-white dark:bg-[#171717] p-6 rounded-lg shadow-lg">
-        {% csrf_token %}
-        <div class="mb-4">
-            <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
-            {{ form.name }}
-             {% if form.name.errors %}
-                <p class="text-sm text-red-500">{{ form.name.errors.as_text }}</p>
-            {% endif %}
-        </div>
-        <div class="mb-4">
-            <label for="email" class="block mt-4 text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
-            {{ form.email_address }}
-            {% if form.email_address.errors %}
-                <p class="text-sm text-red-500">{{ form.email_address.errors.as_text }}</p>
-            {% endif %}
-        </div>
-        <div class="mb-4">
-            <label for="message" class="block mt-4 text-sm font-medium text-gray-700 dark:text-gray-300">Message</label>
-            {{ form.message }}
-            {% if form.message.errors %}
-                <p class="text-sm text-red-500">{{ form.message.errors.as_text }}</p>
-            {% endif %}
-        </div>
-        <button type="submit" class="btn w-full py-3 mt-4">Send Message</button>
-    </form>
+    <div id="contact-form-container">
+        <form action="#" method="POST" class="mt-8 w-full max-w-[600px] bg-white dark:bg-[#171717] p-6 rounded-lg shadow-lg" hx-post="{% url 'contact-us' %}" hx-target="#contact-form-container" hx-swap="outerHTML">
+            {% csrf_token %}
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
+                {{ form.name }}
+                {% if form.name.errors %}
+                    <p class="text-sm text-red-500">{{ form.name.errors.as_text }}</p>
+                {% endif %}
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block mt-4 text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
+                {{ form.email_address }}
+                {% if form.email_address.errors %}
+                    <p class="text-sm text-red-500">{{ form.email_address.errors.as_text }}</p>
+                {% endif %}
+            </div>
+            <div class="mb-4">
+                <label for="message" class="block mt-4 text-sm font-medium text-gray-700 dark:text-gray-300">Message</label>
+                {{ form.message }}
+                {% if form.message.errors %}
+                    <p class="text-sm text-red-500">{{ form.message.errors.as_text }}</p>
+                {% endif %}
+            </div>
+            <button type="submit" class="btn w-full py-3 mt-4">Send Message</button>
+        </form>
+    </div>
 </section>
 {% endblock %}
 
