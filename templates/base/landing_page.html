@@ -20,7 +20,7 @@
                     <div class="relative bg-black min-w-full min-h-full overflow-clip rounded-md">
                         <!-- add your youtube video link here -->
                         <iframe class="absolute top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%] w-full h-full" 
-                            src="https://www.youtube.com/embed/6j4fPVkA3EA?si=llcTrXPRM-MRXDZB&amp;controls=0&rel=0&showinfo=0&autoplay=1&loop=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            src="https://youtu.be/Vw-_bREKGH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
     
                 </div>
@@ -56,7 +56,7 @@
                         <span>Watch video</span>
                     </button>
 
-                    <a class="btn group max-lg:!w-[160px] flex gap-2 shadow-lg !w-[170px] !rounded-xl !py-4 max-lg:!py-2 transition-transform duration-[0.3s] hover:scale-x-[1.03]" href="#">
+                    <a class="btn group max-lg:!w-[160px] flex gap-2 shadow-lg !w-[170px] !rounded-xl !py-4 max-lg:!py-2 transition-transform duration-[0.3s] hover:scale-x-[1.03]" href="{% url 'contact-page' %}">
                         <span>Get started</span>
                         <i class="bi bi-arrow-right group-hover:translate-x-1 duration-300"></i>
                     </a>
@@ -94,7 +94,7 @@
                                     Join Ben and 20,000+ users using BotsNBytes to automate their workflows
                                 </div>
 
-                                <a href="#" class="btn">
+                                <a href="{% url 'contact-page' %}" class="btn">
                                     Get started
                                 </a>
 
@@ -136,7 +136,7 @@
                                 </div>
 
                                 <div class="mt-auto w-full flex px-6 place-content-center">
-                                    <a href="#sign-up" class="btn !w-full !bg-transparent duration-[0.3s] hover:!bg-black hover:!text-white dark:hover:!bg-white dark:hover:!text-black !border-[1px] !border-black !text-black dark:!border-white dark:!text-white">
+                                    <a href="{% url 'contact-page' %}" class="btn !w-full !bg-transparent duration-[0.3s] hover:!bg-black hover:!text-white dark:hover:!bg-white dark:hover:!text-black !border-[1px] !border-black !text-black dark:!border-white dark:!text-white">
                                         Consult
                                     </a>
                                 </div>
@@ -297,7 +297,7 @@
                 BotsNBytes automation systems are powered by cutting-edge AI models. Our powerful workflows simplify task automation, offering advanced capabilities in social media engagement, text generation, and Q&A handling. 
             </p>
             <div class="reveal-up flex mt-8">
-                <a href="#" 
+                <a href="{% url 'contact-page' %}" 
                     target="_blank"
                     rel="noopener"
                     class="shadow-md hover:shadow-xl dark:shadow-gray-800 transition-all duration-300 border-[1px] p-3 px-4 border-black dark:border-white rounded-md">
@@ -318,7 +318,7 @@
 
                 <div class="max-xl:flex max-xl:flex-col place-items-center grid grid-cols-3 gap-8 place-content-center auto-rows-auto">
                     <div class="reveal-up w-[350px] h-[540px] flex max-md:w-full">
-                        <a href="#" class=" relative p-10 transition-all duration-300 group/card  gap-5 flex flex-col w-full h-full  bg-[#f6f7fb] dark:bg-[#171717] rounded-3xl hover:scale-[1.02]">
+                        <a href="{% url 'contact-page' %}" class=" relative p-10 transition-all duration-300 group/card  gap-5 flex flex-col w-full h-full  bg-[#f6f7fb] dark:bg-[#171717] rounded-3xl hover:scale-[1.02]">
                             <div class="overflow-hidden w-full min-h-[180px] h-[180px]">
                                 <img src="https://res.cloudinary.com/ddmqiq5nn/image/upload/v1743871404/1b3d4663-639c-4f99-9f89-abf96e31cd1e.png" class="w-full object-contain h-auto" 
                                     alt="unified interface">
@@ -337,7 +337,7 @@
 
                     
                     <div class="reveal-up w-[350px] h-[540px] flex max-md:w-full">
-                        <a href="#" class=" relative p-10 transition-all duration-300 group/card  gap-5 flex 
+                        <a href="{% url 'contact-page' %}" class=" relative p-10 transition-all duration-300 group/card  gap-5 flex 
                             flex-col w-full h-full  bg-[#f6f7fb] dark:bg-[#171717] rounded-3xl 
                             hover:scale-[1.02]">
                             <div class="w-full min-h-[180px] h-[180px] overflow-hidden">
@@ -358,7 +358,7 @@
 
                     
                     <div class="reveal-up w-[350px] h-[540px] flex max-md:w-full">
-                        <a href="#" class=" relative p-10 transition-all duration-300 group/card  gap-5 flex 
+                        <a href="{% url 'contact-page' %}" class=" relative p-10 transition-all duration-300 group/card  gap-5 flex 
                             flex-col w-full h-full  bg-[#f6f7fb] dark:bg-[#171717] rounded-3xl 
                             hover:scale-[1.02]">
                             <div class="w-full flex place-contet-center min-h-[180px] h-[180px] rounded-xl overflow-hidden">
@@ -402,7 +402,6 @@
         </div>
     </section>
 
-
     <!-- What our clients get -->
     <section class="relative mt-10 flex min-h-[100vh] w-full max-w-[100vw] flex-col place-items-center lg:p-6">
 
@@ -414,7 +413,7 @@
                         What our clients get
                     </h2>
                     
-                    <a href="http://" class="btn !mt-8 !bg-transparent !text-black !border-[1px] !border-black dark:!border-white dark:!text-white">
+                    <a href="{% url 'contact-page' %}" class="btn !mt-8 !bg-transparent !text-black !border-[1px] !border-black dark:!border-white dark:!text-white">
                         Designed for your business
                     </a>
 
@@ -513,7 +512,7 @@
                 </div>
                 
                 <div class="reveal-up h-[240px] w-[450px] max-md:w-full">
-                    <a href="#" class="flex w-full h-full gap-8 rounded-xl dark:shadow-[#171717] hover:shadow-lg duration-300 
+                    <a href="{% url 'contact-page' %}" class="flex w-full h-full gap-8 rounded-xl dark:shadow-[#171717] hover:shadow-lg duration-300 
                             transition-all p-8 group/card">
                         <div class="text-4xl max-md:text-2xl">
                             <i class="bi bi-music-note-beamed"></i>
@@ -655,6 +654,7 @@
         </div>
     </section>
 
+    <!--CTA-->
     <section class="relative flex  w-full min-h-[100vh] max-md:min-h-[80vh] flex-col place-content-center place-items-center overflow-hidden">
         <div class="w-full max-lg:max-w-full place-content-center place-items-center flex flex-col max-w-[80%] gap-4 p-4">
             
@@ -1044,7 +1044,7 @@
 
     
     <!--FAQ-->
-    <section class="relative flex w-full flex-col place-content-center place-items-center gap-[10%] p-[5%] px-[10%]">
+    <section id="faq" class="relative flex w-full flex-col place-content-center place-items-center gap-[10%] p-[5%] px-[10%]">
 
         <h3 class="text-4xl font-medium max-md:text-2xl">
             FAQ
@@ -1139,7 +1139,7 @@
             
             <div class="mt-8 relative flex max-lg:flex-col gap-5">
 
-                <a href="#" class="btn  reveal-up !rounded-full !p-4 font-medium">
+                <a href="{% url 'contact-page' %}" class="btn reveal-up !rounded-full !p-4 font-medium">
                     Free Consultation
                 </a>
             </div>

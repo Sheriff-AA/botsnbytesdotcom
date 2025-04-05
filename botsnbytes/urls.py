@@ -20,6 +20,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic import TemplateView
 
+from pages.views import ContactView
+
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -33,7 +35,7 @@ urlpatterns = [
     ),
     path(
         "contact_us/",
-        TemplateView.as_view(template_name="base/contact_us.html"),
+        ContactView.as_view(),
         name="contact-page",
     ),
 ]
