@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from django.views import generic
+from django.views import generic, View
 from django.http import HttpResponse
 from django.core.paginator import Paginator
 
@@ -78,3 +78,48 @@ class ArticleDetail(generic.DetailView):
         )
 
 
+
+def contact_view(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            if request.htmx:
+                return HttpResponse('<h2 class="text-center text-2xl font-bold text-green-600">Thank you! Your message has been sent.</h2>')
+            return render(request, 'base/contact_success.html')
+        else:
+            return render(request, "base/contact_me.html", {'form': form})
+    else:
+        counter, created = GlobalCounter.objects.get_or_create(key="contact_page_visits")
+
+        # Increment the count
+        counter.count += 1
+        counter.save()
+        form = ContactForm()
+
+    return render(request, 'base/contact_me.html', {'form': form})
+
+
+class ContactView(View):
+    template_name = 'base/contact_us.html'
+    success_template = 'base/contact_success.html'
+
+    def get(self, request):
+        counter, created = GlobalCounter.objects.get_or_create(key="contact_page_visits")
+        counter.count += 1
+        counter.save()
+
+        form = ContactForm()
+        return render(request, self.template_name, {'form': form})
+
+    def post(self, request):
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            if request.htmx:
+                return HttpResponse(
+                    '<h2 class="text-center text-2xl font-bold text-green-600">'
+                    'Thank you! Your message has been sent.</h2>'
+                )
+            return render(request, self.success_template)
+        return render(request, self.template_name, {'form': form})
