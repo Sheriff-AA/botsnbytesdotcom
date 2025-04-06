@@ -30,15 +30,15 @@ class ContactForm(forms.ModelForm):
         widgets = {
             'name': forms.TextInput(attrs={
                 'id': 'name',
-                'class': 'w-full p-3 border rounded-md bg-gray-100 dark:bg-[#1f1f1f] dark:border-[#36393c]',
+                'class': 'w-full p-3 border rounded-md bg-gray-100 dark:bg-[#1f1f1f] dark:border-[#36393c] text-black',
             }),
             'email_address': forms.EmailInput(attrs={
                 'id': 'email',
-                'class': 'w-full p-3 border rounded-md bg-gray-100 dark:bg-[#1f1f1f] dark:border-[#36393c]',
+                'class': 'w-full p-3 border rounded-md bg-gray-100 dark:bg-[#1f1f1f] dark:border-[#36393c] text-black',
             }),
             'message': forms.Textarea(attrs={
                 'id': 'message',
-                'class': 'w-full p-3 border rounded-md bg-gray-100 dark:bg-[#1f1f1f] dark:border-[#36393c]',
+                'class': 'w-full p-3 border rounded-md bg-gray-100 dark:bg-[#1f1f1f] dark:border-[#36393c] text-black',
                 'rows': 4,
             }),
         }
