@@ -20,17 +20,16 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic import TemplateView
 
-from pages.views import ContactView
+from pages.views import ContactView, LandingPageView
 
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     # path("blog/", include("blog.urls"), name="blog"),
     path("page/", include("pages.urls"), name="pages"),
-    # path("", landing_page_view, name="index"),
     path(
         "",
-        TemplateView.as_view(template_name="base/landing_page.html"),
+        LandingPageView.as_view(),
         name="home-page",
     ),
     path(

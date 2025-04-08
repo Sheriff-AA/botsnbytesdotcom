@@ -8,6 +8,17 @@ from .models import ArticlePost, Comment, Contact, GlobalCounter
 from .forms import CommentForm, ContactForm
 
 
+class LandingPageView(View):
+    template_name = 'base/landing_page.html'
+
+    def get(self, request):
+        counter, created = GlobalCounter.objects.get_or_create(key="landing_page_visits")
+        counter.count += 1
+        counter.save()
+
+        return render(request, self.template_name)
+
+
 class ArticleList(generic.ListView):
     queryset = ArticlePost.objects.filter(status=1).order_by('-created_on')
     template_name = 'blog/blog_list.html'
