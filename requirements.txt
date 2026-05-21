@@ -8,7 +8,7 @@ whitenoise
 dj-database-url
 psycopg[binary]
 django-crispy-forms
-psycopg2==2.9.9
+psycopg2
 crispy-tailwind
 django-summernote
 django-htmx
